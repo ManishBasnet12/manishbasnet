@@ -6,19 +6,18 @@ import { useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { motion } from "framer-motion";
-import Preloader from "./Components/Preloader";
-import Homeabout from "./Components/Homeabout";
-import Cube from "./Components/Cube";
-import HeroSectionContent from "./Components/HeroSectionContent";
-import Service from "./Components/Service";
-import Work from "./Components/Work";
-import Footer from "./Components/Footer";
+import { motion, stagger } from "framer-motion";
+import Homeabout from "../Components/Homeabout";
+import Cube from "../Components/Cube";
+import CustomCarousel from "../Components/CustomCarousel";
+import HeroSectionContent from "../Components/HeroSectionContent";
+import Service from "../Components/Service";
+import Work from "../Components/Work";
+import Footer from "../Components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-const AnimationComponent = () => {
+const page = () => {
   const container = useRef();
   const firstText = useRef(null);
   const secondText = useRef(null);
@@ -52,6 +51,7 @@ const AnimationComponent = () => {
     requestAnimationFrame(animate);
     xPercent += 0.04 * direction;
   };
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.3,
@@ -66,70 +66,42 @@ const AnimationComponent = () => {
   }, []);
 
   useEffect(() => {
-    gsap.to(".main", {
-      display: "block",
-      background: "white",
-      ease: "power3",
-      duration: "0.5",
-      delay: 4,
+    gsap.set(".title h1", { y: "150%", opacity: 0 });
+    gsap.set(".slider", { y: "150%" });
+    gsap.set("canvas", { y: "20%", opacity: 0 });
+    gsap.set(".desc", { opacity: 0 });
+
+    const t1 = gsap.timeline({
+      delay: 0.3,
+      ease: "power2.out",
     });
 
-    gsap.to(".main", {
-      scale: 1,
-      background: "white",
-      ease: "power4.inOut",
-      duration: 0.75,
-      delay: 6,
-    });
-
-    gsap.to(".main", {
-      height: "auto",
-      background: "black",
+    t1.to(".main", {
       overflowY: "unset",
       ease: "power4.inOut",
       duration: 0.1,
-      delay: 7.25,
-    });
-
-    gsap.set("header", { y: -200 });
-    gsap.set(" .main-image, .sliderContainer, .hero h1, .hero .desc  ", {
-      y: 200,
-      opacity: 0,
-    });
-
-    gsap.set(".hero", { height: "0vh" });
-
-    const t1 = gsap.timeline({ delay: 1 });
-
-    t1.to(".hero", {
-      height: "calc(90vh - 20px)",
-      ease: "power3.inOut",
-      duration: 0.85,
-      delay: 5.15,
-    }).to("  .main-image, .sliderContainer,  .hero h1, .hero .desc ", {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      stagger: 0.075,
-      ease: "power3.inOut",
-      delay: "-0.95",
-    });
-
-    gsap.to("header", {
-      y: 0,
-      delay: 6.5,
-      duration: 0.5,
-      ease: "power3.Out",
-    });
-  });
+    })
+      .to(".title h1, .slider,.desc", {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.05,
+      })
+      .to("canvas", {
+        opacity: 1,
+        duration: 0.5,
+        y: 0,
+        delay: "-1",
+      });
+  }, []);
 
   return (
     <div ref={container}>
-      <Preloader />
+      <CustomCarousel />
       <main className="main">
         <section className="website-content">
           <div className="hero">
-            <Cube /> 
+            <Cube />
             <HeroSectionContent />
             <motion.div className="sliderContainer">
               <div ref={slider} className="slider">
@@ -148,4 +120,4 @@ const AnimationComponent = () => {
   );
 };
 
-export default AnimationComponent;
+export default page;

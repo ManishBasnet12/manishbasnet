@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap");
+
+.about {
+  background-color: #000000;
+}
+
+.aboutme {
+  /* width: calc(100vw - 40px); */
+  /* margin: 20px auto; */
+  /* padding-bottom: 20px; */
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+.aboutOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 4%;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aslider p {
+  position: relative;
+  font-family: "HelveticaNeueMedium", sans-serif;
+  text-transform: uppercase;
+  margin: 0px;
+  padding-right: 50px;
+  color: white;
+  font-size: 12vw;
+  letter-spacing: 2px;
+  font-weight: 500;
+  padding-right: 8vw;
+}
+
+.aslider p:nth-of-type(2) {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.aboutOverlay p {
+  text-align: center;
+  font-size: 37vw;
+  width: max-content;
+  color: gray;
+  text-transform: uppercase;
+  font-family: "Anton";
+  letter-spacing: 1.64px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: currentColor;
+  -webkit-text-stroke-width: 0.05rem;
+}
+
+.acircle {
+  height: 50%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 1px solid #404040;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vw;
+  color: gray;
+}
+/* 
+.mheading {
+  margin-top: 7.5%;
+  padding-left: 5%;
+  width: 50%;
+  visibility: hidden;
+}
+
+.mheading p {
+  font-size: 2.5vw;
+  font-family: "HelveticaNeueMedium";
+  color: gray;
+} */
+
+.aboutImage {
+  width: 50%;
+  height: 100%;
+  background-color: #202020;
+  /* border-radius: 50px; */
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  transform-origin: bottom;
+}
+
+.mimage {
+  width: 65%;
+}
+
+.aboutImage img {
+  min-width: 400px;
+  width: 100%;
+  aspect-ratio: 4/ 5;
+  object-fit: cover;
+}
+
+.intro {
+  font-size: 2.5vw;
+  font-family: "HelveticaNeueLight";
+  max-width: 80vw;
+  line-height: 1.3;
+  margin: 200px auto 0px;
+  color: #ffffff;
+}
+
+.aboutService {
+  width: 90vw;
+  margin: 200px auto 0;
+  font-family: "HelveticaNeueLight";
+}
+
+.asheading {
+  font-size: 24px;
+  color: white;
+}
+
+.ascards {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: space-between;
+  width: 100%;
+  display: grid;
+  margin-top: 100px;
+}
+
+.ascard {
+  border-right: 0.0625rem solid #48424e;
+  border-left: 0.0625rem solid black;
+  border-radius: 2rem;
+  padding: 30px;
+  transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.astitle {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 1.1rem;
+}
+
+.asdesc {
+  color: gray;
+  font-size: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.asdesc p:nth-child(2) {
+  font-size: 30px;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    -45deg,
+    #101010 0%,
+    #101010 30%,
+    black 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ascard:hover {
+  background-image: linear-gradient(
+    -45deg,
+    #101010 0%,
+    #101010 30%,
+    black 100%
+  );
+  border: 0.0625rem solid #2a272d;
+}
+
+.ascard:hover .asdesc p:nth-child(2) {
+  background-image: linear-gradient(45deg, #101010 0%, #101010 30%, black 100%);
+}
+
+.spotify div{
+  font-family: "HelveticaNeueMedium", sans-serif;
+
+}
+
+@media (max-width:768px){
+  .aboutImage{
+    width: 100%;
+  }
+  .mimage{
+    width: 100%;
+  }
+  .aboutOverlay p{
+    font-size: 400px;
+  }
+
+  .intro{
+    margin-top: 150px;
+    font-size: 24px;
+  }
+
+  .asheading{
+    font-size: 24px;
+  }
+  .ascards{
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+  .ascard{
+    background-image: linear-gradient(-45deg, #101010 0%, #101010 30%, black 100%);
+    border: 0.0625rem solid #2a272d;
+  }
+  .astitle{
+    font-size: 20px;
+  }
+
+  .asdesc{
+    font-size: 16px;
+  }
+
+  .aboutService{
+    margin-top: 150px;
+  }
+  .spotify{
+    margin-top: 150px;
+  }
+
+  .spotify div{
+    font-size: 24px!important;
+    margin-left: 0!important;
+
+  }
+}

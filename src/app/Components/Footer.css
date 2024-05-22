@@ -1,0 +1,203 @@
+.footer {
+  display: flex;
+  max-width: 90vw;
+  gap: 20px;
+  margin: 150px auto 50px;
+}
+
+.socialLinks {
+  width: 40%;
+  height: max-content;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  width: calc(50% - 10px);
+  aspect-ratio: 1/ 1;
+}
+
+.socialCard {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #303030;
+  border-radius: 15px;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.socialCard:hover {
+  border: 1px solid gray;
+}
+.socialCard:hover .socialLinkicon {
+  fill: black;
+  color: black;
+  background-color: #c3c3c3;
+}
+
+.socialCard:hover .socialLinktext h2 {
+  margin-left: 10px;
+}
+.socialLinkicon {
+  width: max-content;
+  padding: 15px;
+  aspect-ratio: 1 / 1;
+  color: #c3c3c3;
+  border: 1px solid #303030;
+  border-radius: 100vw;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.socialLinktext h2 {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: white;
+  font-family: "HelveticaNeueThin", sans-serif;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.myEmail {
+  margin: 40px 0 0 20px;
+  color: white;
+}
+
+.myEmail p {
+  margin-bottom: 0.5rem;
+  font-size: 22px;
+  color: #c3c3c3;
+  font-family: "HelveticaNeueLight", sans-serif;
+}
+
+.myEmail span {
+  font-size: 50px;
+}
+
+.myEmail h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 30px;
+  font-family: "HelveticaNeueLight", sans-serif;
+}
+
+.contact {
+  width: 60%;
+  padding: 50px;
+  border: 1px solid #303030;
+  border-radius: 15px;
+}
+
+.contactTitle h2 {
+  font-size: 30px;
+  font-family: "HelveticaNeueMedium", sans-serif;
+  color: #bbbbbb;
+  text-transform: capitalize;
+  max-width: 500px;
+}
+
+.contactForm {
+  margin-top: 2rem;
+}
+
+.contactForm .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactForm label {
+  font-size: 18px;
+  font-family: "HelveticaNeueMedium", sans-serif;
+  color: grey;
+  text-transform: capitalize;
+}
+
+.contactForm .fullName,
+.contactForm .Email,
+.contactForm .webLink,
+.contactForm .message {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.contactForm .row > * {
+  width: calc(50% - 5px);
+}
+
+.contactForm input {
+  height: 50px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  border: 1px solid #303030;
+  color: #818181;
+  font-size: 18px;
+  background: transparent;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.contactForm input:focus,
+.contactForm input:target,
+.contactForm textarea:focus,
+.contactForm textarea:target {
+  outline: 1px solid #676767;
+}
+
+.send button {
+  font-size: 20px;
+  height: 50px;
+  color: #c3c3c3;
+  width: 100%;
+  border: 1px solid #303030;
+  border-radius: 10px;
+  background-color: transparent;
+  font-family: "HelveticaNeueMedium", sans-serif;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.send button:hover {
+  color: black;
+  background-color: #c3c3c3;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+  .socialLinks,
+  .contact {
+    width: auto;
+  }
+
+  .contact {
+    padding: 16px;
+  }
+
+  .myEmail span {
+    font-size: 40px;
+  }
+
+  .myEmail h2 {
+    font-size: 28px;
+  }
+
+  .contactTitle h2{
+    font-size: 24px;
+  }
+  .contactForm input, .contactForm textarea{
+    font-size: 16px;
+  }
+}

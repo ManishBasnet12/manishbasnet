@@ -1,0 +1,90 @@
+.hworksec {
+  margin: 200px auto 0;
+  width: 90vw;
+}
+.workShow {
+  border-top: 1px solid #303030;
+}
+
+.workDesc {
+  
+  width: 90vw;
+  padding: 36px 0 36px 17vw;
+  margin: 0 auto 10px;
+  color: #FAF9F6;
+  font-family: "HelveticaNeueThin";
+}
+
+.workDesc h2 {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.works {
+  width: 100%;
+  margin: 0 auto 200px;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.work {
+  width: calc(50% - 30px);
+  aspect-ratio: 1/ 1;
+}
+
+.workImage {
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.workImg {
+  width: 100%;
+  aspect-ratio: 1/ 1;
+  object-fit: cover;
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  filter: saturate(0);
+}
+.work:hover .workImage {
+  border-radius: 50%;
+}
+
+.work:hover .workImg {
+  scale: 1.1;
+  filter: saturate(1);
+}
+
+.pName {
+  height: 51px;
+  overflow: hidden;
+}
+
+.cName {
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.work:hover .cName {
+  transform: translate(0, -50px);
+}
+
+.pName p {
+  font-size: 1.75em;
+  margin-top: 20px;
+  font-family: "HelveticaNeueLight";
+}
+
+
+@media (max-width:768px) {
+    .hworksec{
+        margin-top: 150px;
+    }
+    .works{
+        flex-direction: column;
+        margin-bottom: 150px;
+    }
+
+    .work{
+        width: auto;
+    }
+}

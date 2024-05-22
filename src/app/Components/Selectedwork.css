@@ -1,0 +1,60 @@
+.sWorksec {
+  width: 90vw;
+  margin: 100px auto;
+}
+
+.sworktitle h2 {
+  padding: 39px 0 39px 17vw;
+  background-color: black;
+  font-size: 22px;
+  color: #FAF9F6;
+  text-transform: uppercase;
+  font-family: "HelveticaNeueThin";
+}
+
+.swork {
+  display: flex;
+  border-top: 1px solid #3e3e3e;
+  padding: 50px 0;
+  justify-content: space-between;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.sworkcontent,
+.sworkimage {
+  width: calc(50% - 20px);
+  text-transform: capitalize;
+}
+
+.sworkcontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sworkcontent h2 {
+  font-size: 2.35vw;
+  color: white;
+  font-family: "HelveticaNeueThin";
+}
+
+.sworkcontent p {
+  font-size: 2.35vw;
+  color: gray;
+  font-family: "displaylight", serif;
+}
+
+.sworkcontent h4 {
+  margin-top: 1rem;
+  font-size: 16px;
+  color: gray;
+  font-weight: 300;
+  max-width: 500px;
+}
+
+.sworkimg {
+  width: 100%;
+  height: 100%;
+}
