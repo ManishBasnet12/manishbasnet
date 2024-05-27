@@ -14,6 +14,7 @@ import HeroSectionContent from "../Components/HeroSectionContent";
 import Service from "../Components/Service";
 import Work from "../Components/Work";
 import Footer from "../Components/Footer";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,7 +66,7 @@ const page = () => {
     requestAnimationFrame(raf);
   }, []);
 
-  useEffect(() => {
+  useGSAP(() => {
     gsap.set(".title h1", { y: "150%", opacity: 0 });
     gsap.set(".slider", { y: "150%" });
     gsap.set("canvas", { y: "20%", opacity: 0 });

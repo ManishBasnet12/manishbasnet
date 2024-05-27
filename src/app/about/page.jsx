@@ -131,7 +131,7 @@ const About = () => {
           <div className="ascards">
             <div className="ascard">
               <div className="astitle">
-                <h2>Desing</h2>
+                <h2>Design</h2>
               </div>
               <div className="asdesc">
                 <p>

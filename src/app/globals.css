@@ -93,6 +93,7 @@ body.body-fixed {
   left: 0;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   background: var(--pre-background);
 }
 
@@ -190,10 +191,11 @@ body.body-fixed {
 
 .text-line text {
   fill: var(--pre-background);
-  font-size: 10vw;
+  font-family: "roboto";
+  font-size: 14vw;
   font-style: italic;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .main {

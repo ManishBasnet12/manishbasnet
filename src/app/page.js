@@ -14,6 +14,7 @@ import HeroSectionContent from "./Components/HeroSectionContent";
 import Service from "./Components/Service";
 import Work from "./Components/Work";
 import Footer from "./Components/Footer";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,13 +66,13 @@ const AnimationComponent = () => {
     requestAnimationFrame(raf);
   }, []);
 
-  useEffect(() => {
+  useGSAP(() => {
     gsap.to(".main", {
       display: "block",
       background: "white",
       ease: "power3",
       duration: "0.5",
-      delay: 4,
+      delay: 3,
     });
 
     gsap.to(".main", {
@@ -79,7 +80,7 @@ const AnimationComponent = () => {
       background: "white",
       ease: "power4.inOut",
       duration: 0.75,
-      delay: 6,
+      delay: 4.5,
     });
 
     gsap.to(".main", {
@@ -88,10 +89,10 @@ const AnimationComponent = () => {
       overflowY: "unset",
       ease: "power4.inOut",
       duration: 0.1,
-      delay: 7.25,
+      delay: 6.5,
     });
 
-    gsap.set("header", { y: -200 });
+    gsap.set("header", { y: -200, display:"none" });
     gsap.set(" .main-image, .sliderContainer, .hero h1, .hero .desc  ", {
       y: 200,
       opacity: 0,
@@ -103,23 +104,28 @@ const AnimationComponent = () => {
 
     t1.to(".hero", {
       height: "calc(90vh - 20px)",
-      ease: "power3.inOut",
-      duration: 0.85,
-      delay: 5.15,
+      ease: "power2.inOut",
+      duration: 0.75,
+      delay: 3.85,
     }).to("  .main-image, .sliderContainer,  .hero h1, .hero .desc ", {
       y: 0,
       opacity: 1,
       duration: 1,
-      stagger: 0.075,
+      stagger: 0.04,
       ease: "power3.inOut",
-      delay: "-0.95",
+      delay: "-0.75",
     });
 
     gsap.to("header", {
+      display:"block",
+      delay:3.75,
+    })
+
+    gsap.to("header", {
       y: 0,
-      delay: 6.5,
+      delay: 4.9,
       duration: 0.5,
-      ease: "power3.Out",
+      ease: "power4.inOut",
     });
   });
 

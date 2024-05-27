@@ -29,45 +29,44 @@ const Preloader = () => {
         gsap.from(".circles", {
             top: "-100%",
             ease: "elastic.out",
-            duration: 2.5,
-            // delay: 0.5,
+            duration: 2.75,
           });
       
           gsap.to(".inner-circle", {
             width: "4vw",
             height: "4vw",
             ease: "power4.inOut",
-            duration: 1,
-            delay: 0.9,
+            duration: 0.75,
+            delay: 0.75,
           });
       
           gsap.to(".circle-rotate", {
             scale: 1,
             ease: "power4.inOut",
-            duration: 1,
-            delay: 1.3,
+            duration: 0.75,
+            delay: 1,
           });
       
           gsap.to(".circles", {
             rotation: 360,
             ease: "power4.inOut",
-            duration: 1.5,
-            delay: 1.7,
+            duration: 1,
+            delay: 1.5,
           });
       
           gsap.to(".block", {
             display: "block",
             height: "20vw",
             ease: "power4.inOut",
-            duration: 0.75,
-            delay: 2.6,
+            duration: 0.5,
+            delay: 2.25,
           });
       
           gsap.to(".block", {
             width: "60vw",
             ease: "power4.inOut",
             duration: 0.75,
-            delay: 3,
+            delay: 2.5,
           });
       
           const textTimeline = gsap.timeline({});
@@ -76,13 +75,13 @@ const Preloader = () => {
               strokeDashoffset: 0,
               ease: "power4.inOut",
               duration: 0.75,
-              delay: 3.25,
+              delay: 3,
             })
             .to(".text-line text", {
               fillOpacity: 1,
               ease: "power4.inOut",
               duration: 0.75,
-              delay: 3.3,
+              delay: 3.05,
             });
       
           gsap.fromTo(
@@ -94,7 +93,7 @@ const Preloader = () => {
               scale: 0.4,
               opacity: "0",
               ease: "power4.out",
-              delay: 4.3,
+              delay: 3.75,
             },
             {
               duration: 1.5,
@@ -104,7 +103,7 @@ const Preloader = () => {
               opacity: "1",
               x: "translate(-50%,-50%)",
               ease: "power4.out",
-              delay: 4.3,
+              delay: 3.75,
             }
           );
       
@@ -112,35 +111,35 @@ const Preloader = () => {
             width: "0px",
             ease: "power4.inOut",
             duration: 1,
-            delay: 3.9,
+            delay: 3.4,
           });
       
           gsap.to(".block", {
             height: "0px",
             ease: "power4.inOut",
             duration: 1,
-            delay: 4.55,
+            delay: 4.05,
           });
       
           gsap.to(".block", {
             opacity: "0",
             ease: "power4.inOut",
             duration: 1,
-            delay: 4.55,
+            delay: 4.05,
           });
       
           gsap.to(".circles", {
             rotation: 0,
             ease: "power4.inOut",
             duration: 1.5,
-            delay: 4.7,
+            delay: 4.2,
           });
       
           gsap.to(".pre-loader", {
             scale: 0,
             ease: "power4.inOut",
             duration: 2.5,
-            delay: 5.6,
+            delay: 5.1,
             onComplete: removePreloader,
           });
       
