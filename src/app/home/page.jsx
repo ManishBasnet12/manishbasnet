@@ -6,7 +6,7 @@ import { useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 import Homeabout from "../Components/Homeabout";
 import Cube from "../Components/Cube";
 import CustomCarousel from "../Components/CustomCarousel";

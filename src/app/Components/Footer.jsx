@@ -48,12 +48,12 @@ const Footer = () => {
           ))}
           <div className="myEmail">
             <p>If you Prefer Email</p>
-            <h2><span><BsArrowReturnRight /></span>info@manishbasnet.com</h2>
+            <h2><span><BsArrowReturnRight /></span>infomanishbasnet.com</h2>
           </div>
         </div>
         <div className="contact">
           <div className="contactTitle">
-            <h2>Your project's success starts with a conversation—</h2>
+            <h2>Your projects success starts with a conversation—</h2>
             <h2>Reach out to us now!</h2>
           </div>
           <form action="" className="contactForm">
