@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
         <Navbar />
         <CustomCarousel />
 
-        <Suspense fallback={<Loading />}>
+        {/* <Suspense fallback={<Loading />}> */}
           {children}
-        </Suspense>
+        {/* </Suspense> */}
       </body>
     </html>
   );
