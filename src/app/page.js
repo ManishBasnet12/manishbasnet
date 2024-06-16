@@ -37,7 +37,7 @@ const AnimationComponent = () => {
         end: window.innerHeight,
         onUpdate: (e) => (direction = e.direction * -1),
       },
-      x: "-200px",
+      x: "-300px",
     });
     requestAnimationFrame(animate);
   }, []);
