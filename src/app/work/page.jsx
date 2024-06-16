@@ -16,8 +16,8 @@ const Work = () => {
     gsap.set(firstSwork.querySelector(".sworkcontent"), { opacity: "0" });
     gsap.set(firstSwork.querySelector(".sworkimage"), { opacity: "0" });
   
-    const t1 = gsap.timeline({ delay: 0.3 });
-    const t2 = gsap.timeline({ delay: 0.3 });
+    const t1 = gsap.timeline({ delay: 0.5 });
+    const t2 = gsap.timeline({ delay: 0.5 });
   
     t1.to(".htitle h2", { stagger: 0.25, y: 0, duration: 0.95, ease: "power3.out" });
     t2.to(firstSwork, { width: "100%", duration: 1.5, ease: "power4.out" })
