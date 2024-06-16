@@ -32,7 +32,7 @@ const AnimationComponent = () => {
     gsap.to(slider.current, {
       scrollTrigger: {
         trigger: document.documentElement,
-        scrub: 0.25,
+        scrub: 0.1,
         start: 0,
         end: window.innerHeight,
         onUpdate: (e) => (direction = e.direction * -1),
@@ -51,7 +51,7 @@ const AnimationComponent = () => {
     gsap.set(firstText.current, { xPercent: xPercent });
     gsap.set(secondText.current, { xPercent: xPercent });
     requestAnimationFrame(animate);
-    xPercent += 0.04 * direction;
+    xPercent += 0.08 * direction;
   };
   useEffect(() => {
     const lenis = new Lenis({
