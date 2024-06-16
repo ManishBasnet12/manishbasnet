@@ -43,7 +43,7 @@ const About = () => {
     gsap.set(afirstText.current, { xPercent: xPercent });
     gsap.set(asecondText.current, { xPercent: xPercent });
     requestAnimationFrame(animate);
-    xPercent += 0.035 * direction;
+    xPercent += 0.08 * direction;
   };
 
   useEffect(() => {
