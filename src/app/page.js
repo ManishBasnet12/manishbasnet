@@ -56,7 +56,7 @@ const AnimationComponent = () => {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.3,
-      easing: (t) => Math.min(1, 0.999 - Math.pow(2, -10 * t)),
+      easing: (t) => Math.min(1, 0.98 - Math.pow(2, -10 * t)),
     });
 
     function raf(time) {
