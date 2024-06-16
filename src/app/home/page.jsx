@@ -73,7 +73,7 @@ const page = () => {
     gsap.set(".desc", { opacity: 0 });
 
     const t1 = gsap.timeline({
-      delay: 0.3,
+      delay: 0.5,
       ease: "power2.out",
     });
 
