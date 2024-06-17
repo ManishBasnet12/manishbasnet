@@ -43,6 +43,9 @@ const AnimationComponent = () => {
   }, []);
 
   const animate = () => {
+    if (!firstText.current || !secondText.current) {
+      return;
+    }
     if (xPercent < -100) {
       xPercent = 0;
     } else if (xPercent > 0) {
