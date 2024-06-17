@@ -75,15 +75,9 @@ const About = () => {
     if (aboutsecElement) {
       gsap.set(".aboutImage", { x: "50%", opacity: 0 });
 
-      gsap.set(".sheading", { y: "100%" });
       gsap.set(".aboutOverlay", { y: "100%", opacity: 0 });
       const t1 = gsap.timeline({ delay: 0.5 });
 
-      t1.to(".sheading", {
-        y: 0,
-        stagger: 0.15,
-        ease: "power4.out",
-      });
       t1.to(".aboutOverlay", {
         y: "0",
         opacity: 1,
@@ -94,6 +88,7 @@ const About = () => {
         x: "0",
         opacity: 1,
         duration: 1.25,
+        delay:"-1",
         ease: "power4.out",
       });
     }
