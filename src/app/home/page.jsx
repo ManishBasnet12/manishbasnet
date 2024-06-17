@@ -101,7 +101,6 @@ const page = () => {
 
   return (
     <div ref={container}>
-      <CustomCarousel />
       <main className="main">
         <section className="website-content">
           <div className="hero">
