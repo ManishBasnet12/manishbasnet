@@ -7,13 +7,13 @@ const Service = () => {
       heading: "Web Design",
       description:
         "Designing the visual aspects of websites or applications, including layout, color schemes, typography, and overall aesthetics, to enhance usability and user engagement.",
-      icon: "/service2.gif",
+      icon: "/service1.gif",
     },
     {
       heading: "Web Development",
       description:
         "Creating visually appealing and functional websites using HTML, CSS, and JavaScript to ensure a seamless user experience across different devices and screen sizes.",
-      icon: "/service1.gif",
+      icon: "/service2.gif",
     },
 
     {
