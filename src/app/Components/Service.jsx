@@ -15,18 +15,17 @@ const Service = () => {
         "Creating visually appealing and functional websites using HTML, CSS, and JavaScript to ensure a seamless user experience across different devices and screen sizes.",
       icon: "/service2.gif",
     },
-
     {
       heading: "Cross-Browser Compatibility",
       description:
         "They test and optimize websites to work consistently across different web browsers such as Chrome, Firefox, Safari, and Edge",
-      icon: "/service4.gif",
+      icon: "/service3.gif",
     },
     {
       heading: "Web Animation and Effects",
       description:
         "They create animations, transitions, and special effects using CSS, JavaScript, or libraries like GSAP (GreenSock Animation Platform). These animations enhance user engagement and contribute to a more polished user interface.",
-      icon: "/service5.gif",
+      icon: "/service4.gif",
     },
   ];
 
