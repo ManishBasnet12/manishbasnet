@@ -73,7 +73,7 @@ const About = () => {
     const aboutsecElement = aboutsec.current;
 
     if (aboutsecElement) {
-      gsap.set(".aboutImage", { x: "50%", opacity: 0 });
+      gsap.set(".aboutImage", { scale:"1.2", transformOrigin:"center", opacity:"0",});
 
       gsap.set(".aboutOverlay", { y: "100%", opacity: 0 });
       const t1 = gsap.timeline({ delay: 0.5 });
@@ -85,9 +85,9 @@ const About = () => {
         ease: "power4.out",
       });
       t1.to(".aboutImage", {
-        x: "0",
-        opacity: 1,
-        duration: 1.25,
+        scale:"1",
+        opacity:"1",
+        duration: 2,
         delay:"-1",
         ease: "power4.out",
       });
