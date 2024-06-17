@@ -77,7 +77,7 @@ const About = () => {
 
       gsap.set(".sheading", { y: "100%" });
       gsap.set(".aboutOverlay", { y: "100%", opacity: 0 });
-      const t1 = gsap.timeline({ delay: 0.5 });
+      const t1 = gsap.timeline({ delay: 0.7 });
 
       t1.to(".sheading", {
         y: 0,
