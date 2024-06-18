@@ -135,7 +135,7 @@ const AnimationComponent = () => {
   return (
     <div ref={container}>
       <Preloader />
-      <main className="main">
+      <main className="main  page">
         <section className="website-content">
           <div className="hero">
             <Cube /> 

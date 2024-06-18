@@ -207,6 +207,10 @@ body.body-fixed {
   /* height: 100vh; */
 }
 
+.page{
+  display: none;
+}
+
 .website-content {
   position: relative;
   height: calc(100vh - 100px);
