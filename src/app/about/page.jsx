@@ -87,7 +87,7 @@ const Aboutpage = () => {
       t1.to(".aboutImage", {
         scale:"1",
         opacity:"1",
-        duration: 2,
+        duration: 1.5,
         delay:"-1",
         ease: "power4.out",
       });
