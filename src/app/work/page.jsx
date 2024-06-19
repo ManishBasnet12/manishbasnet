@@ -52,7 +52,7 @@ const Workpage = () => {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.3,
-      easing: (t) => Math.min(1, 0.99 - Math.pow(2, -10 * t)),
+      easing: (t) => Math.min(1, 0.9999 - Math.pow(2, -10 * t)),
     });
 
     function raf(time) {
@@ -67,8 +67,8 @@ const Workpage = () => {
         <div className="hwork">
           <div className="hbgoverlay"></div>
           <div className="htitle">
-            <h2>Our Work</h2>
-            <h2>Take a look at our showcase projects </h2>
+            <h2>My Work</h2>
+            <h2>Take a look at my showcase projects </h2>
           </div>
         </div>
         <Selectedwork />

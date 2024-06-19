@@ -5,7 +5,7 @@ const Work = () => {
     <>
       <section className="hworksec">
         <div className="workDesc">
-          <h2>Our showcase projects</h2>
+          <h2>My showcase projects</h2>
         </div>
         <div className=" workShow">
           <div className="works">

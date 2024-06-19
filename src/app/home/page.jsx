@@ -58,7 +58,7 @@ const Homepage = () => {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.3,
-      easing: (t) => Math.min(1, 0.99 - Math.pow(2, -10 * t)),
+      easing: (t) => Math.min(1, 0.9999 - Math.pow(2, -10 * t)),
     });
 
     function raf(time) {
