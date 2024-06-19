@@ -386,6 +386,12 @@ nav {
   margin-left: 5vw;
 }
 
+.pPage{
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
 .tPage {
   display: block;
   overflow: hidden;
@@ -441,6 +447,7 @@ nav {
   font-family: "HelveticaNeueLight", sans-serif;
   color: #ffffff;
   width: max-content;
+  height: max-content;
   font-style: normal;
 }
 

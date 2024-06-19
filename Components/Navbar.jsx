@@ -55,27 +55,27 @@ const Navbar = () => {
       })
         .to(".tPage p", {
           y: "0",
-          stagger: 0.03,
-          delay: "-0.2",
+          stagger: 0.035,
+          delay: "-0.15",
         })
         .to(".tline", {
           width: "100%",
           duration: "0.4",
-          delay: "-0.45",
+          delay: "-0.4",
         })
         .to(" .bline", {
           width: "60%",
           duration: "0.4",
-          delay: "-0.45",
+          delay: "-0.4",
         })
         .to(".rline", {
           height: "10%",
-          delay: "-0.45",
+          delay: "-0.4",
           duration: "0.4",
         })
         .to(".lline", {
           height: "100%",
-          delay: "-0.45",
+          delay: "-0.4",
           duration: "0.4",
         });
       if (isActive === true) {
