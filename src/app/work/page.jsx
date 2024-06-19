@@ -3,11 +3,11 @@
 import Lenis from "@studio-freight/lenis";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
-import Footer from "../Components/Footer";
-import Selectedwork from "../Components/Selectedwork";
+import Footer from "../../../Components/Footer";
+import Selectedwork from "../../../Components/Selectedwork";
 import "./style.css";
 
-const Work = () => {
+const Workpage = () => {
   const worksec = useRef(null);
 
   useLayoutEffect(() => {
@@ -81,4 +81,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Workpage;

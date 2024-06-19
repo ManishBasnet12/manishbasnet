@@ -7,18 +7,17 @@ import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { motion } from "framer-motion";
-import Homeabout from "../Components/Homeabout";
-import Cube from "../Components/Cube";
-import CustomCarousel from "../Components/CustomCarousel";
-import HeroSectionContent from "../Components/HeroSectionContent";
-import Service from "../Components/Service";
-import Work from "../Components/Work";
-import Footer from "../Components/Footer";
+import Homeabout from "../../../Components/Homeabout";
+import Cube from "../../../Components/Cube";
+import HeroSectionContent from "../../../Components/HeroSectionContent";
+import Service from "../../../Components/Service";
+import Work from "../../../Components/Work";
+import Footer from "../../../Components/Footer";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const page = () => {
+const Homepage = () => {
   const container = useRef();
   const firstText = useRef(null);
   const secondText = useRef(null);
@@ -123,4 +122,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Homepage;

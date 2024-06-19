@@ -1,18 +1,18 @@
 "use client";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import SpotifyMusic from "../Components/SpotifyMusic";
+import SpotifyMusic from "../../../Components/SpotifyMusic";
 import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
-import Footer from "../Components/Footer";
+import Footer from "../../../Components/Footer";
 import { BsArrowRight } from "react-icons/bs";
 import "./style.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const About = () => {
+const Aboutpage = () => {
   const aboutsec = useRef(null);
   const afirstText = useRef(null);
   const asecondText = useRef(null);
@@ -191,4 +191,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Aboutpage;
