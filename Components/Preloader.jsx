@@ -183,7 +183,7 @@ const Preloader = () => {
         <h1 className="counter">{currentValue}%</h1>
 
         <div className="loader-container">
-          <p>Use headphones for better experience</p>
+          {/* <p>Use headphones for better experience</p> */}
         </div>
       </div>
     </>
