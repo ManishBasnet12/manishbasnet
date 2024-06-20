@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "../../Components/Navbar";
 import CustomCarousel from "../../Components/CustomCarousel";
-
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
         {/* <Suspense fallback={<Loading />}> */}
           {children}
         {/* </Suspense> */}
+        <Analytics/>
       </body>
     </html>
   );
