@@ -59,7 +59,7 @@ const Homepage = () => {
     const lenis = new Lenis({
       lerp: 0.05,
       duration:0.4,
-      wheelMultiplier: 2.25,
+      wheelMultiplier: 2.5,
       infinite:false    ,
       easing: (t) => Math.min(1, 0.999 - Math.pow(2, -10 * t)),
     });
