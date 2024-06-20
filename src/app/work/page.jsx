@@ -51,8 +51,11 @@ const Workpage = () => {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.3,
-      easing: (t) => Math.min(1, 0.9999 - Math.pow(2, -10 * t)),
+      lerp: 0.05,
+      duration:0.4,
+      wheelMultiplier: 2.25,
+      infinite:false    ,
+      easing: (t) => Math.min(1, 0.999 - Math.pow(2, -10 * t)),
     });
 
     function raf(time) {
