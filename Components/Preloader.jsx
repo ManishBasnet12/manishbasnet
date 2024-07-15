@@ -1,7 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useEffect, useState } from "react";
-import "./Preloader.css";
 
 const Preloader = () => {
   const [currentValue, setCurrentValue] = useState(0);

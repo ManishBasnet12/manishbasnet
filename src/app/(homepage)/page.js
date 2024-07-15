@@ -121,10 +121,10 @@ const AnimationComponent = () => {
       delay: "-0.75",
     });
 
-    gsap.to("header", {
-      visibility:"visible",
-      delay:3.75,
-    })
+    // gsap.to("header", {
+    //   visibility:"visible",
+    //   delay:3.75,
+    // })
 
     gsap.to("header", {
       y: 0,
