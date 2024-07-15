@@ -138,7 +138,8 @@ const Preloader = () => {
 
     gsap.to(".pre-loader", {
       zIndex: 0,
-      duration:0.1,
+      duration:0.01,
+      delay:4.2,
     });
 
     gsap.to(".pre-loader", {
@@ -146,15 +147,15 @@ const Preloader = () => {
       ease: "power4.inOut",
       duration: 2.5,
       delay: 5.1,
-      onComplete: removePreloader,
+      // onComplete: removePreloader,
     });
 
-    function removePreloader() {
-      let preLoader = document.querySelector(".pre-loader");
-      if (preLoader) {
-        preLoader.remove();
-      }
-    }
+    // function removePreloader() {
+    //   let preLoader = document.querySelector(".pre-loader");
+    //   if (preLoader) {
+    //     preLoader.remove();
+    //   }
+    // }
   });
 
   return (
