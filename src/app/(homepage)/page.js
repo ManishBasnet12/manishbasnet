@@ -70,8 +70,8 @@ const AnimationComponent = () => {
     requestAnimationFrame(raf);
   }, []);
 
-  gsap.set("header", { y: -200, visibility: "hidden" });
   useEffect(() => {
+    gsap.set("header", { y: -200, visibility: "hidden" });
     gsap.set(" .main-image, .sliderContainer, .hero h1, .hero .desc  ", {
       y: 200,
       opacity: 0,
