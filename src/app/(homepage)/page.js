@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 import { useRef } from "react";
 import Lenis from "@studio-freight/lenis";
@@ -26,35 +26,35 @@ const AnimationComponent = () => {
   let xPercent = 0;
   let direction = -1;
 
-  // useLayoutEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-  //   gsap.to(slider.current, {
-  //     scrollTrigger: {
-  //       trigger: document.documentElement,
-  //       scrub: 0.1,
-  //       start: 0,
-  //       end: window.innerHeight,
-  //       onUpdate: (e) => (direction = e.direction * -1),
-  //     },
-  //     x: "-50vw",
-  //   });
-  //   requestAnimationFrame(animate);
-  // }, []);
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(slider.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        scrub: 0.1,
+        start: 0,
+        end: window.innerHeight,
+        onUpdate: (e) => (direction = e.direction * -1),
+      },
+      x: "-50vw",
+    });
+    requestAnimationFrame(animate);
+  }, []);
 
-  // const animate = () => {
-  //   if (!firstText.current || !secondText.current) {
-  //     return;
-  //   }
-  //   if (xPercent < -100) {
-  //     xPercent = 0;
-  //   } else if (xPercent > 0) {
-  //     xPercent = -100;
-  //   }
-  //   gsap.set(firstText.current, { xPercent: xPercent });
-  //   gsap.set(secondText.current, { xPercent: xPercent });
-  //   requestAnimationFrame(animate);
-  //   xPercent += 0.08 * direction;
-  // };
+  const animate = () => {
+    if (!firstText.current || !secondText.current) {
+      return;
+    }
+    if (xPercent < -100) {
+      xPercent = 0;
+    } else if (xPercent > 0) {
+      xPercent = -100;
+    }
+    gsap.set(firstText.current, { xPercent: xPercent });
+    gsap.set(secondText.current, { xPercent: xPercent });
+    requestAnimationFrame(animate);
+    xPercent += 0.08 * direction;
+  };
   useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.05,
@@ -69,6 +69,25 @@ const AnimationComponent = () => {
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
+  }, []);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Set initial state
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   useEffect(() => {
@@ -103,8 +122,6 @@ const AnimationComponent = () => {
       duration: 0.1,
       delay: 6.5,
     });
-
-    
 
     const t1 = gsap.timeline({ delay: 1 });
 
@@ -141,17 +158,26 @@ const AnimationComponent = () => {
       <main className="main  page">
         <section className="website-content">
           <div className="hero">
-            <Cube />
-            <div className="mblcube">
-              <Image src="/mblcube.jpg" width={100} height={100} alt="mblcube"  unoptimized/>
-            </div>
+            {isMobile ? (
+              <div className="mblcube">
+                <Image
+                  src="/mblcube.jpg"
+                  width={100}
+                  height={100}
+                  alt="mblcube"
+                  unoptimized
+                />
+              </div>
+            ) : (
+              <Cube />
+            )}
             <HeroSectionContent />
-            {/* <motion.div className="sliderContainer">
+            <motion.div className="sliderContainer">
               <div ref={slider} className="slider">
                 <p ref={firstText}>Frontend Developer -</p>
                 <p ref={secondText}>Frontend Developer -</p>
               </div>
-            </motion.div> */}
+            </motion.div>
           </div>
         </section>
         <Homeabout />

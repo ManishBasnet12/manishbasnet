@@ -596,18 +596,12 @@ canvas {
   left: 25%;
 }
 
-@media (min-width:768px){
-  .mblcube{
-    display: none;
-  }
-}
-
 .mblcube{
   position: absolute;
   height: 110%;
   width: 100%;
   object-fit: cover;
-}
+} 
 
 @media (max-width: 768px) {
   .loader-imgs {
@@ -637,9 +631,7 @@ canvas {
   .slider p{
     font-size: 100px!important;
   }
-  .maincube{
-    display: none;
-  }
+ 
 }
 
 .title .ptitle{
