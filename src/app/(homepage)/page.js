@@ -26,35 +26,35 @@ const AnimationComponent = () => {
   let xPercent = 0;
   let direction = -1;
 
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(slider.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        scrub: 0.1,
-        start: 0,
-        end: window.innerHeight,
-        onUpdate: (e) => (direction = e.direction * -1),
-      },
-      x: "-50vw",
-    });
-    requestAnimationFrame(animate);
-  }, []);
+  // useLayoutEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   gsap.to(slider.current, {
+  //     scrollTrigger: {
+  //       trigger: document.documentElement,
+  //       scrub: 0.1,
+  //       start: 0,
+  //       end: window.innerHeight,
+  //       onUpdate: (e) => (direction = e.direction * -1),
+  //     },
+  //     x: "-50vw",
+  //   });
+  //   requestAnimationFrame(animate);
+  // }, []);
 
-  const animate = () => {
-    if (!firstText.current || !secondText.current) {
-      return;
-    }
-    if (xPercent < -100) {
-      xPercent = 0;
-    } else if (xPercent > 0) {
-      xPercent = -100;
-    }
-    gsap.set(firstText.current, { xPercent: xPercent });
-    gsap.set(secondText.current, { xPercent: xPercent });
-    requestAnimationFrame(animate);
-    xPercent += 0.08 * direction;
-  };
+  // const animate = () => {
+  //   if (!firstText.current || !secondText.current) {
+  //     return;
+  //   }
+  //   if (xPercent < -100) {
+  //     xPercent = 0;
+  //   } else if (xPercent > 0) {
+  //     xPercent = -100;
+  //   }
+  //   gsap.set(firstText.current, { xPercent: xPercent });
+  //   gsap.set(secondText.current, { xPercent: xPercent });
+  //   requestAnimationFrame(animate);
+  //   xPercent += 0.08 * direction;
+  // };
   useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.05,
@@ -146,12 +146,12 @@ const AnimationComponent = () => {
               <Image src="/mblcube.jpg" width={100} height={100} alt="mblcube"  unoptimized/>
             </div>
             <HeroSectionContent />
-            <motion.div className="sliderContainer">
+            {/* <motion.div className="sliderContainer">
               <div ref={slider} className="slider">
                 <p ref={firstText}>Frontend Developer -</p>
                 <p ref={secondText}>Frontend Developer -</p>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </section>
         <Homeabout />
