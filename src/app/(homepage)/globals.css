@@ -128,8 +128,9 @@ body.body-fixed {
 
 .circles {
   position: absolute;
+  visibility: hidden;
+  bottom: 100%;
   left: 10%;
-  bottom: 50px;
   width: 28vw;
   height: 28vw;
   border-radius: 100%;
