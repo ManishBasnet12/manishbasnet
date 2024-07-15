@@ -259,7 +259,7 @@ const Cube = () => {
     };
   }, []);
 
-  return <div className="3dcube" ref={canvasRef}></div>;
+  return <div className="maincube" ref={canvasRef}></div>;
 };
 
 export default Cube;

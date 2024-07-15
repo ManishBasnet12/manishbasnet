@@ -14,6 +14,7 @@ import HeroSectionContent from "../../../Components/HeroSectionContent";
 import Service from "../../../Components/Service";
 import Work from "../../../Components/Work";
 import Footer from "../../../Components/Footer";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -141,6 +142,7 @@ const AnimationComponent = () => {
         <section className="website-content">
           <div className="hero">
             <Cube />
+            
             <HeroSectionContent />
             <motion.div className="sliderContainer">
               <div ref={slider} className="slider">
