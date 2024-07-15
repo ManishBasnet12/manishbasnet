@@ -14,7 +14,6 @@ import HeroSectionContent from "../../../Components/HeroSectionContent";
 import Service from "../../../Components/Service";
 import Work from "../../../Components/Work";
 import Footer from "../../../Components/Footer";
-import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -72,7 +71,7 @@ const AnimationComponent = () => {
     requestAnimationFrame(raf);
   }, []);
 
-  useGSAP(() => {
+  useEffect(() => {
     gsap.to(".main", {
       display: "block",
       background: "white",
