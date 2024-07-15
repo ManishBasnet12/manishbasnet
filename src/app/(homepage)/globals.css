@@ -96,7 +96,7 @@ body.body-fixed {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   background: var(--pre-background);
   z-index: 1;
@@ -104,7 +104,7 @@ body.body-fixed {
 
 .counter {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   position: fixed;
   display: flex;
   justify-content: flex-end;
@@ -219,7 +219,7 @@ body.body-fixed {
 
 .website-content {
   position: relative;
-  height: calc(100vh - 100px);
+  height: calc(100dvh - 100px);
   overflow: hidden;
   background-color: #ffffff;
   /* background-color: #efefef; */
@@ -382,7 +382,7 @@ nav {
 .tbody {
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
 }
 
 .tPages {
@@ -479,7 +479,7 @@ a {
 
 .hero {
   width: calc(100% - 20px);
-  height: calc(100vh - 110px);
+  height: calc(100dvh - 110px);
   margin: 0 10px 10px;
   position: absolute;
   border-radius: 50px;
@@ -607,7 +607,7 @@ canvas {
   .loader-imgs {
     flex-direction: column;
     width: 150px;
-    height: 100vh;
+    height: 100dvh;
     gap: 10px;
   }
   .img {
@@ -716,7 +716,7 @@ footer {
   height: 100%;
   background-color: #ffffff;
   z-index: 1;
-  clip-path: polygon(0 0, 100vw 0, 100vw 100vh, 0 100vh);
+  clip-path: polygon(0 0, 100vw 0, 100vw 100dvh, 0 100dvh);
   transition: all cubic-bezier(0.76, 0, 0.24, 1);
 }
 

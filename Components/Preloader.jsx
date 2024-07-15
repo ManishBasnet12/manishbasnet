@@ -90,7 +90,7 @@ const Preloader = () => {
       {
         duration: 1.5,
         left: "100vw",
-        height: "100vh",
+        height: "100ddvh",
         scale: 0.4,
         opacity: "0",
         ease: "power4.out",
@@ -113,7 +113,7 @@ const Preloader = () => {
       duration:0.01,
       delay:3.2,
     });
-    
+
     gsap.to(".block", {
       width: "0px",
       ease: "power4.inOut",
