@@ -98,7 +98,7 @@ const AnimationComponent = () => {
       delay: 6.5,
     });
 
-    gsap.set("header", { y: -200, display:"none" });
+    gsap.set("header", { y: -200, });
     gsap.set(" .main-image, .sliderContainer, .hero h1, .hero .desc  ", {
       y: 200,
       opacity: 0,
@@ -123,7 +123,7 @@ const AnimationComponent = () => {
     });
 
     gsap.to("header", {
-      display:"block",
+      visibility:"visible",
       delay:3.75,
     })
 

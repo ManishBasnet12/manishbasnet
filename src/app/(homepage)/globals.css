@@ -231,6 +231,7 @@ img {
 }
 
 header {
+  visibility: visible!important;
   background-color: white;
   margin: auto;
   position: relative;
