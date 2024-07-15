@@ -18,7 +18,7 @@ import Footer from "../../../Components/Footer";
 gsap.registerPlugin(ScrollTrigger);
 
 const AnimationComponent = () => {
-  const container = useRef();
+  // const container = useRef();
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
@@ -135,7 +135,7 @@ const AnimationComponent = () => {
   });
 
   return (
-    <div ref={container}>
+    <>
       <Preloader />
       <main className="main  page">
         <section className="website-content">
@@ -155,7 +155,7 @@ const AnimationComponent = () => {
         <Service />
         <Footer />
       </main>
-    </div>
+    </>
   );
 };
 

@@ -99,6 +99,7 @@ body.body-fixed {
   height: 100vh;
   overflow: hidden;
   background: var(--pre-background);
+  z-index: 1;
 }
 
 .counter {

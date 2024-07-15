@@ -25,6 +25,7 @@ const Preloader = () => {
   }, [currentValue]);
 
   useGSAP(() => {
+    
     gsap.to(".circles", {
       visibility: "visible",
       bottom: "50px",
@@ -133,6 +134,11 @@ const Preloader = () => {
       ease: "power4.inOut",
       duration: 1.5,
       delay: 4.2,
+    });
+
+    gsap.to(".pre-loader", {
+      zIndex: 0,
+      duration:0.1,
     });
 
     gsap.to(".pre-loader", {

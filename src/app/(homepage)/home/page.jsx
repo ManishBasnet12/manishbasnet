@@ -18,7 +18,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const Homepage = () => {
-  const container = useRef();
+  // const container = useRef();
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
@@ -102,7 +102,7 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div ref={container}>
+    <>
       <main className="main">
         <section className="website-content">
           <div className="hero">
@@ -121,7 +121,7 @@ const Homepage = () => {
         <Service />
         <Footer />
       </main>
-    </div>
+    </>
   );
 };
 
