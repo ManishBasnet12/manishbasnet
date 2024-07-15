@@ -1,12 +1,12 @@
 "use client";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import SpotifyMusic from "../../../Components/SpotifyMusic";
+import SpotifyMusic from "../../../../Components/SpotifyMusic";
 import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
-import Footer from "../../../Components/Footer";
+import Footer from "../../../../Components/Footer";
 import { BsArrowRight } from "react-icons/bs";
 import "./style.css";
 

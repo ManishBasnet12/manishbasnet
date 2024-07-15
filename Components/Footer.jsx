@@ -88,7 +88,7 @@ const Footer = () => {
               </textarea>
             </div>
             <div className="send">
-              <button>Send</button>
+              <button type="submit">Send</button>
             </div>
           </form>
         </div>

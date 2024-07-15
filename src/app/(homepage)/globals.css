@@ -1,24 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "HelveticaNeueLight";
-  src: url("../../public/Fonts/HelveticaNeueLight.otf") format("opentype");
+  src: url("../../../public/Fonts/HelveticaNeueLight.otf") format("opentype");
   font-style: normal;
 }
 
 @font-face {
   font-family: "HelveticaNeueMedium";
-  src: url("../../public/Fonts/HelveticaNeueMedium.otf") format("opentype");
+  src: url("../../../public/Fonts/HelveticaNeueMedium.otf") format("opentype");
   font-style: normal;
 }
 
 @font-face {
   font-family: "HelveticaNeueRoman";
-  src: url("../../public/Fonts/HelveticaNeueRoman.otf") format("opentype");
+  src: url("../../../public/Fonts/HelveticaNeueRoman.otf") format("opentype");
   font-style: normal;
 }
 
 @font-face {
   font-family: "HelveticaNeueThin";
-  src: url("../../public/Fonts/HelveticaNeueThin.otf") format("opentype");
+  src: url("../../../public/Fonts/HelveticaNeueThin.otf") format("opentype");
   font-style: normal;
 }
 :root {
@@ -458,8 +462,11 @@ nav {
   text-align: left;
 }
 
-#logo a {
+#logo  {
   text-transform: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
