@@ -605,6 +605,8 @@ canvas {
 .mblcube{
   position: absolute;
   height: 110%;
+  width: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
