@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 import { useRef } from "react";
 import Lenis from "@studio-freight/lenis";
@@ -59,9 +59,9 @@ const Homepage = () => {
   useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.05,
-      duration:0.4,
+      duration: 0.4,
       wheelMultiplier: 2.5,
-      infinite:false    ,
+      infinite: false,
       easing: (t) => Math.min(1, 0.999 - Math.pow(2, -10 * t)),
     });
 
@@ -70,6 +70,25 @@ const Homepage = () => {
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
+  }, []);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Set initial state
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   useGSAP(() => {
@@ -107,10 +126,19 @@ const Homepage = () => {
       <main className="main">
         <section className="website-content">
           <div className="hero">
-            <Cube />
-            <div className="mblcube">
-              <Image src="/mblcube.jpg" width={100} height={100} alt="mblcube" unoptimized />
-            </div>
+            {isMobile ? (
+              <div className="mblcube">
+                <Image
+                  src="/mblcube.jpg"
+                  width={100}
+                  height={100}
+                  alt="mblcube"
+                  unoptimized
+                />
+              </div>
+            ) : (
+              <Cube />
+            )}
             <HeroSectionContent />
             <motion.div className="sliderContainer">
               <div ref={slider} className="slider">
