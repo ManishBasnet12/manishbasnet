@@ -108,6 +108,12 @@ const Preloader = () => {
       }
     );
 
+    gsap.to(".pre-loader", {
+      zIndex: 0,
+      duration:0.01,
+      delay:3.2,
+    });
+    
     gsap.to(".block", {
       width: "0px",
       ease: "power4.inOut",
@@ -136,11 +142,7 @@ const Preloader = () => {
       delay: 4.2,
     });
 
-    gsap.to(".pre-loader", {
-      zIndex: 0,
-      duration:0.01,
-      delay:4.2,
-    });
+    
 
     gsap.to(".pre-loader", {
       scale: 0,
