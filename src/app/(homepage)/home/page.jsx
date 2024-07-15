@@ -36,7 +36,7 @@ const Homepage = () => {
         end: window.innerHeight,
         onUpdate: (e) => (direction = e.direction * -1),
       },
-      x: "-500px",
+      x: "-350px",
     });
     requestAnimationFrame(animate);
   }, []);
