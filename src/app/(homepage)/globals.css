@@ -465,6 +465,23 @@ nav {
 }
 
 
+@media(max-width:786px){
+  .rline{
+    display: none;
+  }
+
+  .tline{
+    top: 14%;
+  }
+
+  .tPages a{
+    font-size: 9vw;
+  }
+  .tPages a span{
+    padding-right: 20px;
+  }
+}
+
 #logo  {
   text-transform: none;
   display: flex;
@@ -524,9 +541,6 @@ a {
 .logo:hover .copyright {
   transform: rotate(360deg);
 }
-.logo:hover .name {
-  padding-right: 30px;
-}
 .logo:hover .name .codeBy {
   transform: translateX(-100%);
 }
@@ -541,7 +555,7 @@ a {
   height: fit-content;
   width: 100%;
   margin-top: 22vh;
-  margin-left: 5vw;
+  margin-inline: 5vw;
   max-width: max-content;
   text-align: center;
   text-transform: uppercase;
@@ -632,6 +646,21 @@ canvas {
     font-size: 100px!important;
   }
  
+ .title{
+    width: auto;
+  }
+
+  .hero .desc{
+    width: auto;
+    line-height: 1.5;
+  }
+  .logo .name p:nth-of-type(3) {
+    left: 100px;
+  }
+  .menu .anchor-tag p{
+    font-size: 14px;
+  }
+
 }
 
 .title .ptitle{
@@ -652,9 +681,9 @@ canvas {
 
 .title-icon {
   width: 8.75vw;
-  min-width: 70px;
+  min-width: 60px;
   height: 3.5vw;
-  min-height: 35px;
+  min-height: 30px;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -724,12 +753,17 @@ footer {
 
 @media (max-width:768px){
   .logo p{
-    font-size: 14px;
+    font-size: 12px;
   }
   .nav-item .main-logo{
     width: 45px;
   }
   .menu .anchor-tag{
-    width: 100px;
+    width: 96px;
+    height: 48px;
+  }
+  .title h1{
+    font-size: 8vw;
+    line-height: 1.2;
   }
 }

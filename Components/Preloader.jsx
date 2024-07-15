@@ -90,7 +90,7 @@ const Preloader = () => {
       {
         duration: 1.5,
         left: "100vw",
-        height: "100ddvh",
+        height: "100svh",
         scale: 0.4,
         opacity: "0",
         ease: "power4.out",
@@ -99,7 +99,7 @@ const Preloader = () => {
       {
         duration: 1.5,
         left: "0",
-        height: "100vh",
+        height: "100svh",
         scale: 0.4,
         opacity: "1",
         x: "translate(-50%,-50%)",
