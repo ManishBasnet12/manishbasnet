@@ -142,7 +142,9 @@ const AnimationComponent = () => {
         <section className="website-content">
           <div className="hero">
             <Cube />
-            
+            <div className="mblcube">
+              <Image src="/mblcube.jpg" width={100} height={100} alt="mblcube"  unoptimized/>
+            </div>
             <HeroSectionContent />
             <motion.div className="sliderContainer">
               <div ref={slider} className="slider">

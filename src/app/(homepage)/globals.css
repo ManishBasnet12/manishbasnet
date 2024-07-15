@@ -602,6 +602,11 @@ canvas {
   }
 }
 
+.mblcube{
+  position: absolute;
+  height: 110%;
+}
+
 @media (max-width: 768px) {
   .loader-imgs {
     flex-direction: column;
