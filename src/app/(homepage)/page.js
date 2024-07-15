@@ -17,7 +17,6 @@ import Footer from "../../../Components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const AnimationComponent = () => {
   const container = useRef();
   const firstText = useRef(null);
@@ -58,9 +57,9 @@ const AnimationComponent = () => {
   useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.05,
-      duration:0.4,
+      duration: 0.4,
       wheelMultiplier: 2.5,
-      infinite:false    ,
+      infinite: false,
       easing: (t) => Math.min(1, 0.999 - Math.pow(2, -10 * t)),
     });
 
@@ -71,7 +70,14 @@ const AnimationComponent = () => {
     requestAnimationFrame(raf);
   }, []);
 
+  gsap.set("header", { y: -200, visibility: "hidden" });
   useEffect(() => {
+    gsap.set(" .main-image, .sliderContainer, .hero h1, .hero .desc  ", {
+      y: 200,
+      opacity: 0,
+    });
+
+    gsap.set(".hero", { height: "0vh" });
     gsap.to(".main", {
       display: "block",
       background: "white",
@@ -97,13 +103,7 @@ const AnimationComponent = () => {
       delay: 6.5,
     });
 
-    gsap.set("header", { y: -200, });
-    gsap.set(" .main-image, .sliderContainer, .hero h1, .hero .desc  ", {
-      y: 200,
-      opacity: 0,
-    });
-
-    gsap.set(".hero", { height: "0vh" });
+    
 
     const t1 = gsap.timeline({ delay: 1 });
 
@@ -121,10 +121,10 @@ const AnimationComponent = () => {
       delay: "-0.75",
     });
 
-    // gsap.to("header", {
-    //   visibility:"visible",
-    //   delay:3.75,
-    // })
+    gsap.to("header", {
+      visibility: "visible",
+      delay: 3.75,
+    });
 
     gsap.to("header", {
       y: 0,
@@ -140,7 +140,7 @@ const AnimationComponent = () => {
       <main className="main  page">
         <section className="website-content">
           <div className="hero">
-            <Cube /> 
+            <Cube />
             <HeroSectionContent />
             <motion.div className="sliderContainer">
               <div ref={slider} className="slider">
