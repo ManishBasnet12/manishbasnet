@@ -144,6 +144,9 @@ body.body-fixed {
   .counter {
     padding-bottom: 5rem;
   }
+  .text-line text {
+    font-size: 10vw;
+  }
 }
 
 .circle {
