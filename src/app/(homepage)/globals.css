@@ -139,7 +139,7 @@ body.body-fixed {
 
 @media (max-width: 768px) {
   .circles {
-    top: 60%;
+    top: 55%;
   }
   .counter {
     padding-bottom: 5rem;
