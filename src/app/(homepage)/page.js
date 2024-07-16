@@ -154,7 +154,7 @@ const AnimationComponent = () => {
 
   return (
     <>
-      <Preloader />
+      <Preloader isMobile={isMobile} />
       <main className="main  page">
         <section className="website-content">
           <div className="hero">

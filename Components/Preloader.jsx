@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useEffect, useState } from "react";
 
-const Preloader = () => {
+const Preloader = ({isMobile}) => {
   const [currentValue, setCurrentValue] = useState(0);
 
   useEffect(() => {
@@ -171,7 +171,7 @@ const Preloader = () => {
             <svg
               height="100%"
               stroke="#404040"
-              stroke-width="2"
+              stroke-width={isMobile ? "0.75" : "2"}
               className="text-line"
               width="100%"
             >
