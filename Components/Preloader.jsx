@@ -64,7 +64,7 @@ const Preloader = ({isMobile}) => {
     });
 
     gsap.to(".block", {
-      width: "60vw",
+      width: "65vw",
       ease: "power4.inOut",
       duration: 0.75,
       delay: 2,
