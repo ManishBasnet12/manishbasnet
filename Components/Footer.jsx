@@ -9,9 +9,10 @@ import {
 } from "react-icons/fa6";
 import { BsArrowReturnRight } from "react-icons/bs";
 import { useEffect, useState } from "react";
-import axios from 'axios'; // Make sure to import axios
-import { toast } from 'react-toastify'; // Make sure to import toast if using react-toastify
+import axios from 'axios';
 
+import { ToastContainer, toast, Slide } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Footer = () => {
   const socialLinks = [
     {
@@ -169,6 +170,19 @@ const Footer = () => {
           </div>
         </form>
       </div>
+      <ToastContainer position="bottom-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition={Slide}
+      />
+
     </div>
   );
 };
