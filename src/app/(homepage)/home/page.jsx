@@ -91,10 +91,9 @@ const Homepage = () => {
     };
   }, []);
 
-  useGSAP(() => {
+  useEffect(() => {
     gsap.set(".title h1", { y: "150%", opacity: 0 });
     gsap.set(".slider", { y: "150%" });
-    gsap.set("canvas", { y: "20%", opacity: 0 });
     gsap.set(".desc", { opacity: 0 });
 
     const t1 = gsap.timeline({
@@ -113,12 +112,6 @@ const Homepage = () => {
         duration: 0.8,
         stagger: 0.05,
       })
-      .to("canvas", {
-        opacity: 1,
-        duration: 0.5,
-        y: 0,
-        delay: "-1",
-      });
   }, []);
 
   return (

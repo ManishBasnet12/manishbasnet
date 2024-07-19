@@ -24,19 +24,12 @@ const Cube = () => {
       };
     }
 
-    let renderer,
-      scene,
-      perspectiveCamera,
-      canvas,
-      orbitControls;
+    let renderer, scene, perspectiveCamera, canvas, orbitControls;
 
     let dummy = new THREE.Object3D(),
       rows = [],
       rubiksCube = new THREE.Group(),
-      rubiksCubeTopRow,
-      rubiksCubeMiddleRow,
-      rubiksCubeBottomRow,
-      cubeMaterial;
+      rubiksCubeTopRow;
 
     function setUpScene() {
       renderer = new THREE.WebGLRenderer({
@@ -114,17 +107,6 @@ const Cube = () => {
       // scene.add(new RectAreaLightHelper(frontLight));
       // scene.add(new THREE.DirectionalLightHelper(sunLight, 5));
     }
-    function addObjects() {
-      const geoKnot = new THREE.TorusKnotGeometry(1.5, 0.5, 200, 16);
-      const matKnot = new THREE.MeshStandardMaterial({
-        color: 0xffffff,
-        roughness: 0,
-        metalness: 0,
-      });
-      const meshKnot = new THREE.Mesh(geoKnot, matKnot);
-      meshKnot.position.set(0, 5, 0);
-      scene.add(meshKnot);
-    }
     function setUpCameras() {
       const sizes = Sizes();
 
@@ -157,7 +139,7 @@ const Cube = () => {
         duration: 5000,
         direction: "alternate",
         loop: true,
-        loopComplete: function (anim) {
+        loopComplete: function () {
           console.log("sa");
         },
       });
