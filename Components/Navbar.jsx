@@ -1,23 +1,31 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const [count, setCount] = useState(0);
-  const [isClickable, setIsClickable] = useState(true); // New state to handle the debounce
-  const timeoutRef = useRef(null); // Ref to store the timeout
-
   const navItems = [
-    { title: "Home", href: "/home" },
-    { title: "About", href: "/about" },
-    { title: "Work", href: "/work" },
-    { title: "Contact", href: "/contact" },
+    {
+      title: "Home",
+      href: "/home",
+    },
+    {
+      title: "About",
+      href: "/about",
+    },
+    {
+      title: "Work",
+      href: "/work",
+    },
+    {
+      title: "Contact",
+      href: "/contact",
+    },
   ];
-
   useEffect(() => {
     if (isActive) {
       document.body.classList.add("body-fixed");
@@ -36,7 +44,6 @@ const Navbar = () => {
       gsap.set(".tPage p", { y: "120%" });
       gsap.set(".tline, .bline", { width: "0" });
       gsap.set(".rline, .lline", { height: "0" });
-
       const tl = gsap.timeline({
         defaults: { ease: "power3.inOut" },
       });
@@ -56,7 +63,7 @@ const Navbar = () => {
           duration: "0.4",
           delay: "-0.4",
         })
-        .to(".bline", {
+        .to(" .bline", {
           width: "60%",
           duration: "0.4",
           delay: "-0.4",
@@ -71,7 +78,6 @@ const Navbar = () => {
           delay: "-0.4",
           duration: "0.4",
         });
-
       if (isActive === true) {
         tl.play();
       } else if (isActive === false) {
@@ -81,24 +87,9 @@ const Navbar = () => {
   }, [isActive, count]);
 
   const clickMenu = () => {
-    if (isClickable) {
-      setIsClickable(false); // Prevent further clicks
-      setIsActive(!isActive);
-      setCount(count + 1);
-
-      timeoutRef.current = setTimeout(() => {
-        setIsClickable(true); // Re-enable clicks after 500ms
-      }, 650);
-    }
+    setIsActive(!isActive);
+    setCount(count + 1);
   };
-
-  useEffect(() => {
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current); // Cleanup timeout on component unmount
-      }
-    };
-  }, []);
 
   const activeFunction = () => {
     setIsActive(false);
@@ -149,23 +140,25 @@ const Navbar = () => {
                 <div className="rline"></div>
                 <div className="tPages">
                   <div className="pPage">
-                    {navItems.map((item, index) => (
-                      <Link
-                        key={index}
-                        className="tPage"
-                        href={item.href}
-                        onClick={activeFunction}
-                      >
+                  {navItems.map((item, index) => (
+                    <Link
+                      key={index}
+                      className="tPage"
+                      href={item.href}
+                      onClick={activeFunction}
+                    >
+                      
                         <p>
                           <span>0{index + 1}</span>
                           {item.title}
                         </p>
-                      </Link>
-                    ))}
+                     
+                    </Link>
+                  ))}
                   </div>
                 </div>
               </div>
-            </div>
+            </div>{" "}
           </div>
         </nav>
       </header>
