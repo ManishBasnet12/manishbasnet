@@ -31,3 +31,24 @@ export async function POST(request) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
+
+
+
+// export const GET = async (request) => {
+//   // Connect to the database
+
+//   try {
+    
+
+//       const results = await User.find({});
+//       const response = new NextResponse(JSON.stringify({
+//           results
+//       }), { status: 200 });
+
+//       return response;
+//   } catch (err) {
+//       console.error('Error:', err);
+//       const errorResponse = new NextResponse(JSON.stringify({ message: err.message }), { status: 500 });
+//       return errorResponse;
+//   }
+// }

@@ -1,8 +1,28 @@
+"use client";
+
 import { FaRegEdit, FaRegEye } from "react-icons/fa";
 import { AiTwotoneDelete } from "react-icons/ai";
 import "../../../src/app/(homepage)/globals.css";
+import { useEffect, useState } from "react";
 
 const ContactList = () => {
+  const [data, setData] = useState([]);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/api/dashboard/contactus", {});
+      const result = await response.json();
+      setData(result);
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  },[]);
+
   return (
     <div className=" flex justify-center items-center  w-[100%] h-[clac(100vh-75px)] rounded-2xl bg-[#051327]">
       <div className="  bg-[#091F3C] w-[calc(100%-250px)] h-[calc(100%-150px)] rounded-2xl">

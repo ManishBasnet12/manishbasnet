@@ -50,7 +50,10 @@ const Footer = () => {
     event.preventDefault(); // Prevent default form submission
     try {
       setLoading(true);
-      const response = await axios.post("/api/contactus", user);
+      // const response = await axios.post(`${process.env.DOMAIN}/api/contactus`, user);
+      // const response = await axios.post("http://localhost:3001/api/contactus", user);
+      const response = await axios.post("https://admin.manishbasnet.com/api/contactus", user);
+      
       console.log("Message sent successfully", response.data);
       toast.success("Message sent successfully");
       // Clear the form fields
@@ -68,6 +71,7 @@ const Footer = () => {
     }
   };
 
+  console.log(process.env.DOMAIN)
   useEffect(() => {
     if (
       user.fullname.length > 0 &&
@@ -80,6 +84,7 @@ const Footer = () => {
       setButtonDisabled(true);
     }
   }, [user]);
+  console.log(process.env.api)
 
   return (
     <div className="footer">
