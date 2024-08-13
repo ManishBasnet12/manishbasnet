@@ -88,7 +88,7 @@ const Navbar = () => {
 
       timeoutRef.current = setTimeout(() => {
         setIsClickable(true); // Re-enable clicks after 500ms
-      }, 500);
+      }, 650);
     }
   };
 
