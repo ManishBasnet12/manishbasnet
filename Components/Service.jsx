@@ -8,24 +8,48 @@ const Service = () => {
       description:
         "Designing the visual aspects of websites or applications, including layout, color schemes, typography, and overall aesthetics, to enhance usability and user engagement.",
       icon: "/serviceicon1.gif",
+      services: [
+        "UI/UX Design",
+        "Responsive Design",
+        "Layout Optimization",
+        "Brand Alignment",
+      ],
     },
     {
       heading: "Web Development",
       description:
         "Creating visually appealing and functional websites using HTML, CSS, and JavaScript to ensure a seamless user experience across different devices and screen sizes.",
       icon: "/serviceicon2.gif",
+      services: [
+        "Frontend Development",
+        "Performance Optimization",
+        "Scalability",
+        "Security Implementation",
+      ],
     },
     {
       heading: "Cross-Browser Compatibility",
       description:
-        "They test and optimize websites to work consistently across different web browsers such as Chrome, Firefox, Safari, and Edge",
+        "Testing and optimizing websites to work consistently across different web browsers such as Chrome, Firefox, Safari, and Edge.",
       icon: "/serviceicon3.gif",
+      services: [
+        "Browser Testing",
+        " Optimization",
+        "Responsive Adjustments",
+        "Legacy Support",
+      ],
     },
     {
       heading: "Web Animation and Effects",
       description:
-        "They create animations, transitions, and special effects using CSS, JavaScript, or libraries like GSAP (GreenSock Animation Platform). These animations enhance user engagement and contribute to a more polished user interface.",
+        "Creating animations, transitions, and special effects using CSS, JavaScript, or libraries like GSAP (GreenSock Animation Platform) to enhance user engagement and contribute to a more polished user interface.",
       icon: "/serviceicon4.gif",
+      services: [
+        "Interactive Elements",
+        "Motion Design",
+        "Performance Optimization",
+        "Visual Storytelling",
+      ],
     },
   ];
 
@@ -41,17 +65,19 @@ const Service = () => {
               <div className="serviceIcon">
                 <Image
                   src={service.icon}
-                  width={10}
-                  height={10}
+                  width={50}  // Adjust width as needed
+                  height={50} // Adjust height as needed
                   alt={service.heading}
-                  optimized
-                  quality={3}
                 />
               </div>
               <div className="serviceContent">
                 <h2 className="heading">{service.heading}</h2>
-
                 <p className="paragraph">{service.description}</p>
+                <ul className="servicesList">
+                  {service.services.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
