@@ -9,35 +9,35 @@ const Selectedwork = () => {
       stype: "ui design, animation",
       simage: "/Work/home.jpg",
       sdesc:
-        "I relish the challenge of creating web applications from the ground up and watching them come to life in the browser.",
+        "Implement a sleek preloading animation that keeps users engaged while the content loads. Use a simple, branded animation that smoothly transitions into the main content, signaling the page's readiness without causing distractions.",
     },
     {
       sname: "Subarna Bhandari",
       stype: "Portfolio, Design",
       simage: "/Work/sbhd.png",
       sdesc:
-        "I relish the challenge of creating web applications from the ground up and watching them come to life in the browser.",
+        "Subarna Bhandari's portfolio website features their design projects, showcasing their skills and creative approach. It serves as a professional platform to highlight their expertise and attract potential clients and employers. The site effectively demonstrates their talent and unique style.",
     },
     {
       sname: "Esabda",
       stype: "web Devlopment, Design",
       simage: "/Work/esabda.png",
       sdesc:
-        "I relish the challenge of creating web applications from the ground up and watching them come to life in the browser.",
+        "The website provides valuable insights and information on Business related topics. It aims to educate readers, offer expert opinions, and keep them informed about industry trends and developments.",
     },
     {
       sname: "LIMS, DFTQC",
       stype: "Software, Devlopment",
       simage: "/Work/lims.png",
       sdesc:
-        "I relish the challenge of creating web applications from the ground up and watching them come to life in the browser.",
+        " LIMS improves efficiency by automating sample tracking and workflow management, enhancing data accuracy through centralized data management. It ensures compliance with regulations and provides remote access for better collaboration and scalability.",
     },
     {
       sname: "Google Traders",
       stype: "Logo, Design",
       simage: "/Work/google.jpg",
       sdesc:
-        "I relish the challenge of creating web applications from the ground up and watching them come to life in the browser.",
+        "created and implemented a logo that effectively communicates your brand's identity and enhances your website's appeal.",
     },
   ];
 
