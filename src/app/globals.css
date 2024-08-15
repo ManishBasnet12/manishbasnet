@@ -224,7 +224,7 @@ body.body-fixed {
   background-color: black;
   color: white !important;
   position: relative;
-  overflow: hidden;
+  overflow-y: hidden;
   /* display: none; */
   /* height: 100vh; */
 }
