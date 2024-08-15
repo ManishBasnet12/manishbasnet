@@ -120,7 +120,7 @@ const AnimationComponent = () => {
       overflowY: "unset",
       ease: "power4.inOut",
       duration: 0.1,
-      delay: 6.5,
+      delay: 5.5,
     });
 
     const t1 = gsap.timeline({ delay: 1 });
