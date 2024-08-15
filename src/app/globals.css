@@ -236,6 +236,7 @@ body.body-fixed {
 .website-content {
   position: relative;
   height: calc(100svh - 100px);
+  max-height: 1080px;
   overflow: hidden;
   background-color: #ffffff;
   /* background-color: #efefef; */
@@ -512,7 +513,7 @@ a {
 
 .hero {
   width: calc(100% - 20px);
-  height: calc(100svh - 110px);
+  height: calc(100% - 10px);
   margin: 0 10px 10px;
   position: absolute;
   border-radius: 50px;
@@ -521,6 +522,7 @@ a {
   background-size: cover;
   text-transform: uppercase;
   overflow: hidden;
+ 
 }
 
 .logo {
@@ -664,6 +666,10 @@ canvas {
  
  .title{
     width: auto;
+  }
+
+  .hero {
+    height: calc(100svh - 110px);
   }
 
   .hero .desc{

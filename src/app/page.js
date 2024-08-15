@@ -126,7 +126,7 @@ const AnimationComponent = () => {
     const t1 = gsap.timeline({ delay: 1 });
 
     t1.to(".hero", {
-      height: "calc(100svh - 110px)",
+      height: "calc(100% - 10px)",
       ease: "power2.inOut",
       duration: 0.75,
       delay: 3.85,
