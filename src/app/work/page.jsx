@@ -16,7 +16,7 @@ const Workpage = () => {
     if (worksecElement) {
       const firstSwork = document.querySelector(".swork");
 
-      gsap.set(".htitle h2", { y: "250%" });
+      gsap.set(".htitle h2", { y: "250%", opacity:"0" });
       gsap.set(firstSwork, { width: "0%" });
       gsap.set(firstSwork.querySelector(".sworkcontent"), { opacity: "0" });
       gsap.set(firstSwork.querySelector(".sworkimage"), { opacity: "0" });
@@ -27,6 +27,7 @@ const Workpage = () => {
       t1.to(".htitle h2", {
         stagger: 0.25,
         y: 0,
+        opacity:1,
         duration: 0.95,
         ease: "power3.out",
       });
