@@ -11,7 +11,7 @@ const Work = () => {
         <div className=" workShow">
           <div className="works">
             <div className="work">
-              <Link href="https://www.behance.net/gallery/123301413/Gooogle-Traders-Logo" target="_blank">
+              <Link href="/work/google" >
                 <div className="workImage">
                   <Image
                     className="workImg"
@@ -33,8 +33,8 @@ const Work = () => {
             </div>
             <div className="work">
               <Link
-                href="https://www.subarnabhandari.com/studio"
-                target="blank"
+                href="/work/subarna"
+               
               >
                 <div className="workImage">
                   <Image
@@ -57,7 +57,7 @@ const Work = () => {
             </div>
 
             <div className="work">
-              <Link href="https://esabda.com/" target="blank">
+              <Link href="/work/esabda" >
                 <div className="workImage">
                   <Image
                     className="workImg"
@@ -79,7 +79,7 @@ const Work = () => {
             </div>
 
             <div className="work">
-              <Link href="https://lims.dftqc.gov.np/" target="blank">
+              <Link href="/work/lims" >
                 <div className="workImage">
                   <Image
                     className="workImg"
