@@ -53,7 +53,7 @@ const Selectedwork = () => {
         <h2>Selected Work</h2>
       </div>
       {swork.map((work, index) => (
-        <div className="swork" key={index}>
+        <div className="swork" key={index+1}>
           <div className="sworkcontent">
             <div className="sworkcon">
               <h2>{work.sname}</h2>
@@ -63,7 +63,7 @@ const Selectedwork = () => {
             </div>
           </div>
           <div className="sworkimage">
-            <Link href={work.slink} target="blank">
+            <Link href={work.slink} target="_blank">
             <div className="sworkimg">
               <Image
                 src={work.simage}
