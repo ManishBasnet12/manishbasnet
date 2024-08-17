@@ -1,3 +1,4 @@
+import "./style.css";
 
 export const metadata = {
     metadataBase: new URL("https://www.manishbasnet.com/work"),

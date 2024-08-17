@@ -1,6 +1,20 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+@font-face {
+  font-family: "HumaneLight";
+  src: url("../../public/Fonts/Humane-Light.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "HumaneMedium";
+  src: url("../../public/Fonts/Humane-Medium.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "HumaneBold";
+  src: url("../../public/Fonts/Humane-Bold.ttf") format("opentype");
+}
 
 @font-face {
   font-family: "HelveticaNeueLight";

@@ -6,31 +6,35 @@ import Link from "next/link";
 const Selectedwork = () => {
   const swork = [
     {
-      sname: "E-Commerce",
-      stype: "ui design, animation",
-      simage: "/Work/home.jpg",
-      slink:"https://www.behance.net/gallery/195661385/Landing-page-Preloader",
-      sdesc:
-        "Implement a sleek preloading animation that keeps users engaged while the content loads. Use a simple, branded animation that smoothly transitions into the main content, signaling the page's readiness without causing distractions.",
-    },
-    {
-      sname: "Subarna Bhandari",
-      stype: "Portfolio, Design",
-      simage: "/Work/sbhd.png",
-      slink:"https://www.subarnabhandari.com/studio",
-      sdesc:
-        "Subarna Bhandari's portfolio website features their design projects, showcasing their skills and creative approach. It serves as a professional platform to highlight their expertise and attract potential clients and employers. The site effectively demonstrates their talent and unique style.",
-    },
-    {
-      sname: "Esabda",
+      wname:"Esabda",
+      sname: "esabda",
       stype: "web Devlopment, Design",
       simage: "/Work/esabda.png",
       slink:"https://esabda.com",
       sdesc:
         "The website provides valuable insights and information on Business related topics. It aims to educate readers, offer expert opinions, and keep them informed about industry trends and developments.",
     },
+    // {
+    //   sname: "E-Commerce",
+    //   stype: "ui design, animation",
+    //   simage: "/Work/home.jpg",
+    //   slink:"https://www.behance.net/gallery/195661385/Landing-page-Preloader",
+    //   sdesc:
+    //     "Implement a sleek preloading animation that keeps users engaged while the content loads. Use a simple, branded animation that smoothly transitions into the main content, signaling the page's readiness without causing distractions.",
+    // },
     {
-      sname: "LIMS, DFTQC",
+      wname:"Subarna Bhandari",
+      sname: "subarna",
+      stype: "Portfolio, Design",
+      simage: "/Work/sbhd.png",
+      slink:"https://www.subarnabhandari.com/studio",
+      sdesc:
+        "Subarna Bhandari's portfolio website features their design projects, showcasing their skills and creative approach. It serves as a professional platform to highlight their expertise and attract potential clients and employers. The site effectively demonstrates their talent and unique style.",
+    },
+    
+    {
+      wname:"LIMS, DFTQC",
+      sname: "lims",
       stype: "Software, Devlopment",
       simage: "/Work/lims.png",
       slink:"https://lims.dftqc.gov.np",
@@ -38,7 +42,8 @@ const Selectedwork = () => {
         " LIMS improves efficiency by automating sample tracking and workflow management, enhancing data accuracy through centralized data management. It ensures compliance with regulations and provides remote access for better collaboration and scalability.",
     },
     {
-      sname: "Google Traders",
+      wname:"Google Traders",
+      sname: "google",
       stype: "Logo, Design",
       simage: "/Work/google.jpg",
       slink:"https://www.behance.net/gallery/123301413/Gooogle-Traders-Logo",
@@ -56,14 +61,14 @@ const Selectedwork = () => {
         <div className="swork" key={index+1}>
           <div className="sworkcontent">
             <div className="sworkcon">
-              <h2>{work.sname}</h2>
+              <h2>{work.wname}</h2>
               <p>{work.stype}</p>
 
               <h4>{work.sdesc}</h4>
             </div>
           </div>
           <div className="sworkimage">
-            <Link href={work.slink} target="_blank">
+            <Link href={`/work/${work.sname}`}>
             <div className="sworkimg">
               <Image
                 src={work.simage}

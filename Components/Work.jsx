@@ -11,11 +11,11 @@ const Work = () => {
         <div className=" workShow">
           <div className="works">
             <div className="work">
-              <Link href="https://www.behance.net/gallery/195661385/Landing-page-Preloader" target="blank">
+              <Link href="https://www.behance.net/gallery/123301413/Gooogle-Traders-Logo" target="_blank">
                 <div className="workImage">
                   <Image
                     className="workImg"
-                    src="/Work/home.jpg"
+                    src="/Work/google.jpg"
                     width={100}
                     height={100}
                     alt="home"
@@ -24,11 +24,11 @@ const Work = () => {
                 </div>
                 <div className="pName">
                   <div className="cName">
-                    <p>E-Commerce</p>
-                    <p style={{ color: "green" }}>E-Commerce</p>
+                    <p>Google Traders</p>
+                    <p style={{ color: "green" }}>Google Traders</p>
                   </div>
                 </div>
-                <p className="aName">ui design, animation</p>
+                <p className="aName">Logo , design</p>
               </Link>
             </div>
             <div className="work">

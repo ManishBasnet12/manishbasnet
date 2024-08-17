@@ -4,6 +4,8 @@
   font-style: normal;
 }
 
+
+
 .hwork {
   padding: 0 5vw;
   min-height: 300px;
@@ -76,3 +78,118 @@
     font-size: 26px;
   }
 }
+
+.workDy{
+  background-color: #101010;
+
+}
+
+.workDetails {
+  max-width: 70vw;
+  margin: auto;
+  padding-top: 100px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.workDetails h1 {
+  font-family: "HumaneLight";
+  text-transform: uppercase;
+  font-size: clamp(200px, 20vw, 350px);
+  font-weight: 300;
+  color: white;
+  text-align: center;
+}
+
+.workDetailsContent{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-size:18px;
+  font-family: "HelveticaNeueLight";
+}
+
+.workDetailsContent p > :first-child{
+  color: gray;
+}
+
+.workDetailsContent a{
+  color: white;
+  text-decoration: underline;
+}
+
+.tagline{
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  color: gray;
+  margin-bottom: 50px;
+}
+
+.workDetails img{
+  filter: brightness(80%);
+  transition: all 500ms ease-in-out;
+}
+
+.workDetails img:hover{
+  filter: brightness(100%);
+}
+
+.image1{
+  border-radius: 30px;
+  margin-block: 100px;
+}
+
+.workContent{
+  max-width: 900px;
+  margin: auto;
+}
+
+.workContent h3{
+  font-size: clamp(50px,5vw, 100px);
+  font-family: "HumaneLight";
+  font-weight: 300;
+}
+
+.workContent > *{
+  margin-bottom: 50px;
+}
+
+.workContent p{
+  color: gray;
+}
+
+.secImage{
+  display: flex;
+  gap: 50px;
+ 
+}
+
+.secImage div{
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.nextWork{
+  font-family: "HumaneLight";
+  font-size: clamp(150px, 20vw, 300px);
+  font-weight: 300;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.nextBtn{
+  text-align: center;
+}
+
+.nextBtn a{
+  border: 2px solid #b4b4b4;
+  padding: 10px 20px;
+  border-radius: 10vw;
+  color: #b4b4b4;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
