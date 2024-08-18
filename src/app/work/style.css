@@ -83,7 +83,6 @@
 
 .workDy {
   background-color: #101010;
- 
 }
 
 .workDetails {
@@ -181,10 +180,46 @@
 }
 
 .nextBtn a {
-  border: 2px solid #b4b4b4;
-  padding: 10px 20px;
+  width: fit-content;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+  padding: 0 35px 0 30px;
   border-radius: 10vw;
   color: #b4b4b4;
-  font-size: 18px;
-  text-decoration: underline;
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: auto;
+}
+
+.nextBtn .nextArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms ease-out;
+}
+
+.nextBtn span svg {
+  font-size: 24px;
+}
+
+.textRevel {
+  height: 50%;
+  overflow: hidden;
+}
+
+.textHidden{
+  transition: all 300ms ease-out;
+}
+
+.nextBtn a:hover .textHidden {
+  transform: translateY(-50%);
+}
+
+.textHidden p{
+  padding-top: 2px;
 }

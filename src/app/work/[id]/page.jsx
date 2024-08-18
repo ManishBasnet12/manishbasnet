@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import Footer from "../../../../Components/Footer";
+import { RiArrowRightFill } from "react-icons/ri";
 
 const WorkDetails = ({ params }) => {
   const paramsID = params.id; // Convert the param to an integer for comparison
@@ -11,7 +12,7 @@ const WorkDetails = ({ params }) => {
   const sworkDetails = [
     {
       id: "1",
-      sname:"esabda",
+      sname: "esabda",
       title: "Esabda",
       tagline:
         " Esabda delivers various forms of articles & information that provide some extra help to make daily life better.",
@@ -53,7 +54,7 @@ const WorkDetails = ({ params }) => {
     },
     {
       id: "2",
-      sname:"subarna",
+      sname: "subarna",
       title: "Subarna Bhandari",
       tagline:
         " Subarna Bhandari, a Web, Graphic, & UI/UX Designer dedicated to transforming your vision into a compelling digital experience.",
@@ -95,7 +96,7 @@ const WorkDetails = ({ params }) => {
     },
     {
       id: "3",
-      sname:"lims",
+      sname: "lims",
       title: "LIMS, DFTQC",
       tagline:
         " LIMS: Enhancing Precision and Efficiency in Every Laboratory Workflow",
@@ -108,7 +109,8 @@ const WorkDetails = ({ params }) => {
         { img2: "/Work/lims2.png" },
         { img3: "/Work/lims3.png" },
         { img4: "/Work/lims4.png" },
-      ],      objective: [
+      ],
+      objective: [
         {
           obj1: "As a digital solutions provider, I worked on enhancing laboratory operations through the development of a Laboratory Information Management System (LIMS). My goal was to create a user-friendly system that manages sample tracking, ensures data accuracy, and automates workflows while meeting industry standards.",
         },
@@ -136,7 +138,7 @@ const WorkDetails = ({ params }) => {
     },
     {
       id: "4",
-      sname:"google",
+      sname: "google",
       title: "Google traders",
       tagline:
         " Google Traders: Your Source for Cutting-Edge Electronic Devices.",
@@ -149,7 +151,8 @@ const WorkDetails = ({ params }) => {
         { img2: "/Work/google2.png" },
         { img3: "/Work/google3.png" },
         { img4: "/Work/google4.jpg" },
-      ],      objective: [
+      ],
+      objective: [
         {
           obj1: "The primary objective of creating the Google Traders logo is to establish a strong and unique brand identity. The logo should visually convey the core values and mission of Google Traders, making it instantly recognizable and setting the tone for the brand’s presence in the market.",
         },
@@ -299,7 +302,17 @@ const WorkDetails = ({ params }) => {
               <p>next work</p>
             </div>
             <div className="nextBtn">
-              <Link href={nextWork}>{sworkDetails[nextWorkId - 1].title}</Link>
+              <Link href={nextWork}>
+                <span className="nextArrow">
+                  <RiArrowRightFill />
+                </span>
+                <div className="textRevel">
+                  <div className="textHidden">
+                  <p>{sworkDetails[nextWorkId - 1].title}</p>
+                  <p>{sworkDetails[nextWorkId - 1].title}</p>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         ) : (
