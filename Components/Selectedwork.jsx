@@ -68,7 +68,7 @@ const Selectedwork = () => {
             </div>
           </div>
           <div className="sworkimage">
-            <Link href={`/work/${work.sname}`}>
+            <Link className="large" href={`/work/${work.sname}`} >
             <div className="sworkimg">
               <Image
                 src={work.simage}

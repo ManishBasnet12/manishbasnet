@@ -92,6 +92,8 @@
   z-index: 100;
 }
 
+
+
 body {
   width: 100vw;
   overflow-x: hidden;
@@ -803,3 +805,4 @@ footer {
     line-height: 1.2;
   }
 }
+
