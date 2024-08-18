@@ -58,6 +58,8 @@ const Selectedwork = () => {
         <h2>Selected Work</h2>
       </div>
       {swork.map((work, index) => (
+                   <Link className="large" href={`/work/${work.sname}`} >
+
         <div className="swork" key={index+1}>
           <div className="sworkcontent">
             <div className="sworkcon">
@@ -68,7 +70,7 @@ const Selectedwork = () => {
             </div>
           </div>
           <div className="sworkimage">
-            <Link className="large" href={`/work/${work.sname}`} >
+           
             <div className="sworkimg">
               <Image
                 src={work.simage}
@@ -78,9 +80,11 @@ const Selectedwork = () => {
                 unoptimized
               />
             </div>
-            </Link>
           </div>
+
         </div>
+        </Link>
+
       ))}
     </div>
   );
