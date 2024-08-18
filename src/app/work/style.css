@@ -83,12 +83,14 @@
 
 .workDy {
   background-color: #101010;
+ 
 }
 
 .workDetails {
   max-width: 1320px;
   width: 90vw;
   margin: auto;
+  margin-bottom: 200px;
   padding-top: 100px;
   color: white;
   text-transform: uppercase;

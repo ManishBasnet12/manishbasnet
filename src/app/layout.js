@@ -25,9 +25,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <CustomCarousel />
 
-        {/* <Suspense fallback={<Loading />}> */}
           {children}
-        {/* </Suspense> */}
         <Analytics/>
       </body>
     </html>
