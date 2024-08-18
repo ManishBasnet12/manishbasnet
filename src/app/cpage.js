@@ -7,6 +7,7 @@ import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { motion } from "framer-motion";
+import Preloader from "../../Components/Preloader";
 import Homeabout from "../../Components/Homeabout";
 import Cube from "../../Components/Cube";
 import HeroSectionContent from "../../Components/HeroSectionContent";
@@ -17,7 +18,7 @@ import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Homepage = () => {
+const AnimationComponent = () => {
   // const container = useRef();
   const firstText = useRef(null);
   const secondText = useRef(null);
@@ -30,7 +31,7 @@ const Homepage = () => {
     gsap.to(slider.current, {
       scrollTrigger: {
         trigger: document.documentElement,
-        scrub: 1,
+        scrub: 0.1,
         start: 0,
         end: window.innerHeight,
         onUpdate: (e) => (direction = e.direction * -1),
@@ -54,7 +55,6 @@ const Homepage = () => {
     requestAnimationFrame(animate);
     xPercent += 0.08 * direction;
   };
-
   useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.05,
@@ -91,31 +91,71 @@ const Homepage = () => {
   }, []);
 
   useEffect(() => {
-    gsap.set(".title h1", { y: "150%", opacity: 0 });
-    gsap.set(".slider", { y: "150%" });
-    gsap.set(".desc", { opacity: 0 });
-
-    const t1 = gsap.timeline({
-      delay: 0.5,
-      ease: "power2.out",
+    gsap.set("header", { y: -200, visibility: "hidden" });
+    gsap.set(" .main-image, .sliderContainer, .hero h1, .hero .desc  ", {
+      y: 200,
+      opacity: 0,
     });
 
-    t1.to(".main", {
+    gsap.set(".hero", { height: "0vh" });
+    gsap.to(".main", {
+      display: "block",
+      background: "white",
+      ease: "power3",
+      duration: "0.5",
+      delay: 3,
+    });
+
+    gsap.to(".main", {
+      scale: 1,
+      background: "white",
+      ease: "power4.inOut",
+      duration: 0.75,
+      delay: 4.5,
+    });
+
+    gsap.to(".main", {
+      height: "auto",
+      background: "black",
       overflowY: "unset",
       ease: "power4.inOut",
       duration: 0.1,
-    })
-      .to(".title h1, .slider,.desc", {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.05,
-      })
-  }, []);
+      delay: 5.5,
+    });
+
+    const t1 = gsap.timeline({ delay: 1 });
+
+    t1.to(".hero", {
+      height: "calc(100% - 10px)",
+      ease: "power2.inOut",
+      duration: 0.75,
+      delay: 3.85,
+    }).to("  .main-image, .sliderContainer,  .hero h1, .hero .desc ", {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      stagger: 0.04,
+      ease: "power3.inOut",
+      delay: "-0.75",
+    });
+
+    gsap.to("header", {
+      visibility: "visible",
+      delay: 3.75,
+    });
+
+    gsap.to("header", {
+      y: 0,
+      delay: 4.9,
+      duration: 0.5,
+      ease: "power4.inOut",
+    });
+  });
 
   return (
     <>
-      <main className="main">
+      <Preloader isMobile={isMobile} />
+      <main className="main  page">
         <section className="website-content">
           <div className="hero">
             {isMobile ? (
@@ -149,4 +189,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default AnimationComponent;

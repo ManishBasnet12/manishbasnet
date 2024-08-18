@@ -12,7 +12,7 @@ const Navbar = () => {
   const timeoutRef = useRef(null); // Ref to store the timeout
 
   const navItems = [
-    { title: "Home", href: "/home" },
+    { title: "Home", href: "/" },
     { title: "About", href: "/about" },
     { title: "Work", href: "/work" },
     { title: "Contact", href: "/contact" },
@@ -118,7 +118,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <Link href="/home" className="nav-item" id="logo">
+          <Link href="/" className="nav-item" id="logo">
             <Image
               src="/mainlogo.png"
               width={80}
