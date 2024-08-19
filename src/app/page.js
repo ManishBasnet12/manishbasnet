@@ -18,7 +18,6 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 const Homepage = () => {
-  // const container = useRef();
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
