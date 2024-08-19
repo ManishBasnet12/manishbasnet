@@ -1,5 +1,6 @@
 "use client";
 import Lenis from "@studio-freight/lenis";
+import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
@@ -207,12 +208,31 @@ const WorkDetails = ({ params }) => {
     requestAnimationFrame(raf);
   }, []);
 
+  useEffect(() => {
+    gsap.set(".workDetails h1", { y: "-100%", opacity: 0 });
+    gsap.set(".tagline", { opacity: 0 });
+
+    const t1 = gsap.timeline({
+      delay:0.2,
+      ease: "power4.out",
+    });
+
+    t1.to(".workDetails h1, .tagline", {
+      y: 5,
+      opacity: 1,
+      duration: 0.6,
+      stagger: 0.,
+    });
+  }, []);
+
   return (
     <div className="workDy">
       <div className="workDetails">
         {workDetail ? (
           <div>
-            <h1>{workDetail.title}</h1>
+            <div className="wHead">
+              <h1>{workDetail.title}</h1>
+            </div>
             <p className="tagline">{workDetail.tagline}</p>
             <div className="workDetailsContent">
               <p className="left">
@@ -308,8 +328,8 @@ const WorkDetails = ({ params }) => {
                 </span>
                 <div className="textRevel">
                   <div className="textHidden">
-                  <p>{sworkDetails[nextWorkId - 1].title}</p>
-                  <p>{sworkDetails[nextWorkId - 1].title}</p>
+                    <p>{sworkDetails[nextWorkId - 1].title}</p>
+                    <p>{sworkDetails[nextWorkId - 1].title}</p>
                   </div>
                 </div>
               </Link>

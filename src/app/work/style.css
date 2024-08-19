@@ -95,13 +95,22 @@
   text-transform: uppercase;
 }
 
+.wHead {
+  overflow: hidden;
+}
+
+.tagline {
+  opacity: 0;
+}
 .workDetails h1 {
   font-family: "HumaneLight";
   text-transform: uppercase;
-  font-size: clamp(200px, 20vw, 350px);
+  font-size: clamp(150px, 20vw, 350px);
   font-weight: 300;
   color: white;
   text-align: center;
+  line-height: 0.8;
+  transform: translateY(-100%);
 }
 
 .workDetailsContent {
@@ -212,7 +221,7 @@
   overflow: hidden;
 }
 
-.textHidden{
+.textHidden {
   transition: all 300ms ease-out;
 }
 
@@ -220,6 +229,6 @@
   transform: translateY(-50%);
 }
 
-.textHidden p{
+.textHidden p {
   padding-top: 2px;
 }
