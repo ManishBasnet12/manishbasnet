@@ -112,7 +112,7 @@ const Homepage = () => {
     .to(".title h1,.desc, .slider", {
       y: 0,
       opacity: 1,
-      duration: 0.5,
+      duration: 0.7,
       stagger: 0.05,
       ease: "power4.out",
     })
