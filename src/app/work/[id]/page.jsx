@@ -194,11 +194,16 @@ const WorkDetails = ({ params }) => {
 
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.05,
-      duration: 0.4,
-      wheelMultiplier: 2.5,
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+      direction: "vertical", 
+      gestureDirection: "vertical", 
+      smooth: true,
+      mouseMultiplier: 1.1,
+      smoothTouch: false,
+      touchMultiplier: 2,
       infinite: false,
-      easing: (t) => Math.min(1, 0.999 - Math.pow(2, -10 * t)),
+      wheel: true,
     });
 
     function raf(time) {
@@ -213,7 +218,7 @@ const WorkDetails = ({ params }) => {
     gsap.set(".tagline", { opacity: 0 });
 
     const t1 = gsap.timeline({
-      delay:0.2,
+      delay: 0.2,
       ease: "power4.out",
     });
 
@@ -221,7 +226,7 @@ const WorkDetails = ({ params }) => {
       y: 5,
       opacity: 1,
       duration: 0.6,
-      stagger: 0.,
+      stagger: 0,
     });
   }, []);
 

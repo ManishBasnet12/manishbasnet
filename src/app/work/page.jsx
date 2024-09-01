@@ -52,11 +52,16 @@ const Workpage = () => {
 
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.05,
-      duration:0.4,
-      wheelMultiplier: 2.5,
-      infinite:false    ,
-      easing: (t) => Math.min(1, 0.999 - Math.pow(2, -10 * t)),
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+      direction: 'vertical', // vertical, horizontal
+      gestureDirection: 'vertical', // vertical, horizontal, both
+      smooth: true,
+      mouseMultiplier: 1.1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+      wheel: true,
     });
 
     function raf(time) {
@@ -64,6 +69,9 @@ const Workpage = () => {
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
+
+    
+    
   }, []);
   return (
     <>
