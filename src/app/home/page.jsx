@@ -111,11 +111,12 @@ const Homepage = () => {
       ease: "power4.inOut",
       duration: 0.1,
     })
-      .to(".title h1, .slider,.desc", {
+      .to(".title h1,.desc, .slider", {
         y: 0,
         opacity: 1,
-        duration: 0.8,
-        stagger: 0.05,
+        duration: 0.15,
+        stagger: 0.1,
+        ease: "power4.inOut",
       })
   }, []);
 
