@@ -23,43 +23,61 @@ const Homepage = () => {
   const slider = useRef(null);
   let xPercent = 0;
   let direction = -1;
+  let animationRunning = true; 
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+
     gsap.to(slider.current, {
       scrollTrigger: {
-        trigger: document.documentElement,
+        trigger: ".hero",
         scrub: 1,
-        start: 0,
-        end: window.innerHeight,
+        start: "top 100px",
+        end: "bottom top",
         onUpdate: (e) => (direction = e.direction * -1),
+        onLeave: () => {
+          animationRunning = false; // Stop animation when .hero is out of view
+        },
+        onEnterBack: () => {
+          animationRunning = true; // Resume animation when .hero comes back into view
+        },
       },
       x: "-350px",
     });
-    requestAnimationFrame(animate);
-  }, []);
 
-  const animate = () => {
-    if (!firstText.current || !secondText.current) {
-      return;
-    }
-    if (xPercent < -100) {
-      xPercent = 0;
-    } else if (xPercent > 0) {
-      xPercent = -100;
-    }
-    gsap.set(firstText.current, { xPercent: xPercent });
-    gsap.set(secondText.current, { xPercent: xPercent });
+    // Function to handle the animation
+    const animate = () => {
+      if (!firstText.current || !secondText.current) {
+        return;
+      }
+
+      // Only animate if animationRunning is true
+      if (animationRunning) {
+        if (xPercent < -100) {
+          xPercent = 0;
+        } else if (xPercent > 0) {
+          xPercent = -100;
+        }
+
+        gsap.set(firstText.current, { xPercent: xPercent });
+        gsap.set(secondText.current, { xPercent: xPercent });
+        xPercent += 0.08 * direction;
+      }
+
+      requestAnimationFrame(animate);
+    };
+
     requestAnimationFrame(animate);
-    xPercent += 0.08 * direction;
-  };
+
+   
+  }, []);
 
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-      direction: "vertical", 
-      gestureDirection: "vertical", 
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: "vertical",
+      gestureDirection: "vertical",
       smooth: true,
       mouseMultiplier: 1.1,
       smoothTouch: false,
@@ -108,14 +126,13 @@ const Homepage = () => {
       overflowY: "unset",
       ease: "power4.inOut",
       duration: 0.1,
-    })
-    .to(".title h1,.desc, .slider", {
+    }).to(".title h1,.desc, .slider", {
       y: 0,
       opacity: 1,
       duration: 0.7,
       stagger: 0.05,
       ease: "power4.out",
-    })
+    });
   }, []);
 
   return (

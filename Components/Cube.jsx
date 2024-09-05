@@ -57,8 +57,6 @@ const Cube = () => {
       orbitControls.enablePan = false;
       orbitControls.maxPolarAngle = Math.PI * 2;
       orbitControls.target.set(0, 0, 0);
-
-      // var controls = new ObjectControls(perspectiveCamera, canvas, rubiksCube);
     }
     function addLights() {
       RectAreaLightUniformsLib.init();
@@ -77,35 +75,11 @@ const Cube = () => {
       rectLight3.position.set(-2, 4, 0);
       rectLight3.lookAt(rubiksCube.position);
       scene.add(rectLight3);
-      // -2,4
 
       const frontLight = new THREE.RectAreaLight("0xfff", 5, 1.84, 8.89);
       frontLight.position.set(-4, 0, -3);
       frontLight.lookAt(rubiksCube.position);
       scene.add(frontLight);
-
-      // const sunLight = new THREE.DirectionalLight(
-      //     "#eee",
-      //     1
-      // );
-      // sunLight.castShadow = true;
-      // sunLight.shadow.camera.far = 20;
-      // sunLight.shadow.mapSize.set(1024, 1024);
-      // sunLight.shadow.normalBias = 0.05;
-
-      // sunLight.position.set(
-      //     1,
-      //     5,
-      //     0,
-      // );
-      // scene.add(sunLight);
-
-      // Helpers
-      // scene.add(new RectAreaLightHelper(rightLight));
-      // scene.add(new RectAreaLightHelper(centerLight));
-      // scene.add(new RectAreaLightHelper(rectLight3));
-      // scene.add(new RectAreaLightHelper(frontLight));
-      // scene.add(new THREE.DirectionalLightHelper(sunLight, 5));
     }
     function setUpCameras() {
       const sizes = Sizes();
@@ -164,24 +138,16 @@ const Cube = () => {
         loop: true,
       });
     }
-    // Cubes
     function addCubesToScene() {
-      // this.scene.add(this.model);
       rows.forEach((row, idx) => {
         if (idx === 0) rubiksCubeTopRow = row;
         rubiksCube.add(row);
         scene.add(rubiksCube);
       });
-      // rubiksCube.position.x = -4;
     }
     function generateCubeInstances() {
       const cubeGeometry = new RoundedBoxGeometry(1, 1, 1);
-      // const cubeMat = new THREE.MeshPhongMaterial({
-      //     color: "0x000",
-      //     emissive: "0x000",
-      //     specular: "0xfff",
-      //     shininess: 100,
-      // });
+
       const cubeMat = new THREE.MeshPhysicalMaterial({
         color: "0x000",
         emissive: "0x000",
@@ -190,7 +156,6 @@ const Cube = () => {
         metalness: 1,
         iridescence: 1,
       });
-      // const cubeMat = new THREE.MeshStandardMaterial({ color: 0x000, roughness: 0, metalness: 1 });
 
       for (let index = 0; index < 3; index++) {
         const cubeInstance = new THREE.InstancedMesh(cubeGeometry, cubeMat, 9);
@@ -218,14 +183,11 @@ const Cube = () => {
       });
 
       rubiksCubeTopRow = rubiksCube.children[0];
-
-      // this.rubiksCube.rotateOnAxis(new Vector3(0, 0, 0), 30);
     }
 
     setUpScene();
     setUpCameras();
-    // addObjects();
-    // Add the cubes
+
     generateCubeInstances();
     arrangeCubes();
     addCubesToScene();
