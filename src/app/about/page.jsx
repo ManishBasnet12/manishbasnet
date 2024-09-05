@@ -24,7 +24,7 @@ const Aboutpage = () => {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(slider.current, {
+    gsap.to(aslider.current, {
       scrollTrigger: {
         trigger: ".about",
         scrub: 1,
