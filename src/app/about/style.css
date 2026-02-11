@@ -8,7 +8,7 @@
   /* width: calc(100vw - 40px); */
   /* margin: 20px auto; */
   /* padding-bottom: 20px; */
-  height: calc(100svh - 100px);
+  height: calc(100svh - 70px);
   overflow: hidden;
   display: flex;
   justify-content: end;
@@ -108,7 +108,7 @@
 }
 
 .intro {
-  font-size: 2.5vw;
+  font-size: 2vw;
   font-family: "HelveticaNeueLight";
   max-width: 80vw;
   line-height: 1.3;

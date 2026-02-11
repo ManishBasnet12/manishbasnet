@@ -248,7 +248,7 @@ body.body-fixed {
 
 .website-content {
   position: relative;
-  height: calc(100svh - 100px);
+  height: calc(100svh - 70px);
   max-height: 1080px;
   overflow: hidden;
   background-color: #ffffff;
@@ -273,7 +273,7 @@ nav {
   z-index: 2;
   margin: auto;
   width: 90vw;
-  height: 100px;
+  height: 70px;
   display: flex;
   align-items: center;
   background-color: white;
@@ -598,7 +598,7 @@ a {
   color: #faf9f6;
   margin-top: 1rem;
   width: 600px;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "HelveticaNeueThin", sans-serif;
   text-align: justify;
   line-height: 1.75;
@@ -703,6 +703,7 @@ canvas {
 .title h1 {
   position: relative;
   text-transform: uppercase;
+  font-size: 1em;
   font-family: "HelveticaNeueLight", sans-serif;
   letter-spacing: 4px;
   line-height: 1;
@@ -769,7 +770,7 @@ footer {
   text-transform: uppercase;
   margin: 0px;
   color: white;
-  font-size: 12vw;
+  font-size: 10vw;
   letter-spacing: 2px;
   font-weight: 500;
   padding-right: 50px;
@@ -803,7 +804,7 @@ footer {
     height: 48px;
   }
   .title h1 {
-    font-size: 8vw;
+    font-size: 5vw;
     line-height: 1.2;
   }
 }

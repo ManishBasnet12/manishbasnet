@@ -6,8 +6,8 @@
 
 .hwork {
   padding: 0 5vw;
-  min-height: 300px;
-  height: calc(45vh - 120px);
+  /* min-height: 300px; */
+  height: calc(45vh - 150px);
   width: calc(100vw - 20px);
   display: flex;
   align-items: end;
@@ -29,14 +29,14 @@
 
 .hwork h2:nth-child(2) {
   font-weight: 100;
-  font-size: 40px;
+  font-size: 28px;
   color: gray;
   margin-top: 10px;
   font-family: "displaylight";
 }
 
 .hwork h2 {
-  font-size: 5vw;
+  font-size: 3vw;
   color: rgb(255, 255, 255);
   font-family: "HelveticaNeueLight";
   text-transform: uppercase;
@@ -105,7 +105,7 @@
 .workDetails h1 {
   font-family: "HumaneLight";
   text-transform: uppercase;
-  font-size: clamp(150px, 20vw, 350px);
+  font-size: clamp(150px, 15vw, 350px);
   font-weight: 300;
   color: white;
   text-align: center;
@@ -116,7 +116,7 @@
 .workDetailsContent {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 15px;
   font-size: 18px;
   font-family: "HelveticaNeueLight";
 }
@@ -178,7 +178,7 @@
 
 .nextWork {
   font-family: "HumaneLight";
-  font-size: clamp(150px, 20vw, 300px);
+  font-size: clamp(150px, 15vw, 300px);
   font-weight: 300;
   text-align: center;
   margin-top: 100px;
