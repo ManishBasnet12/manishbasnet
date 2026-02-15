@@ -51,10 +51,9 @@ const Footer = () => {
     try {
       setLoading(true);
       // const response = await axios.post(`${process.env.DOMAIN}/api/contactus`, user);
-      // const response = await axios.post("http://localhost:3001/api/contactus", user);
-      const response = await axios.post("https://admin.manishbasnet.com/api/contactus", user);
+      // const response = await axios.post("http://localhost:3000/api/contactus", user);
+      const response = await axios.post("https://admin.mbasnet.com.np/api/contactus", user);
       
-      console.log("Message sent successfully", response.data);
       toast.success("Message sent successfully");
       // Clear the form fields
       setUser({
@@ -64,14 +63,12 @@ const Footer = () => {
         message: "",
       });
     } catch (error) {
-      console.log("Message send failed", error.message);
       toast.error(error.message);
     } finally {
       setLoading(false);
     }
   };
 
-  console.log(process.env.DOMAIN)
   useEffect(() => {
     if (
       user.fullname.length > 0 &&
@@ -84,7 +81,6 @@ const Footer = () => {
       setButtonDisabled(true);
     }
   }, [user]);
-  console.log(process.env.api)
 
   return (
     <div className="footer">
