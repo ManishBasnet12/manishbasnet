@@ -3,55 +3,61 @@ import "./Service.css";
 
 const Service = () => {
   const servicesList = [
-    {
-      heading: "Web Design",
-      description:
-        "Designing the visual aspects of websites or applications, including layout, color schemes, typography, and overall aesthetics, to enhance usability and user engagement.",
-      icon: "/serviceicon1.gif",
-      services: [
-        "UI/UX Design",
-        "Responsive Design",
-        "Layout Optimization",
-        "Brand Alignment",
-      ],
-    },
-    {
-      heading: "Web Development",
-      description:
-        "Creating visually appealing and functional websites using HTML, CSS, and JavaScript to ensure a seamless user experience across different devices and screen sizes.",
-      icon: "/serviceicon2.gif",
-      services: [
-        "Frontend Development",
-        "Performance Optimization",
-        "Scalability",
-        "Security Implementation",
-      ],
-    },
-    {
-      heading: "Cross-Browser Compatibility",
-      description:
-        "Testing and optimizing websites to work consistently across different web browsers such as Chrome, Firefox, Safari, and Edge.",
-      icon: "/serviceicon3.gif",
-      services: [
-        "Browser Testing",
-        " Optimization",
-        "Responsive Adjustments",
-        "Legacy Support",
-      ],
-    },
-    {
-      heading: "Web Animation and Effects",
-      description:
-        "Creating animations, transitions, and special effects using CSS, JavaScript, or libraries like GSAP (GreenSock Animation Platform) to enhance user engagement and contribute to a more polished user interface.",
-      icon: "/serviceicon4.gif",
-      services: [
-        "Interactive Elements",
-        "Motion Design",
-        "Performance Optimization",
-        "Visual Storytelling",
-      ],
-    },
-  ];
+  {
+    heading: "UI/UX & Web Design",
+    description:
+      "I design clean, conversion-focused digital experiences that combine aesthetics with strategy. Every interface is crafted to guide users naturally, strengthen brand identity, and increase engagement.",
+    icon: "/serviceicon1.gif",
+    services: [
+      "User-Centered Interface Design",
+      "Wireframing & Interactive Prototyping",
+      "Design Systems & Component Libraries",
+      "Responsive & Mobile-First Design",
+      "Figma-to-Code Precision",
+    ],
+  },
+  {
+    heading: "Web Development",
+    description:
+      "I build modern, scalable web applications that transform ideas into real, revenue-generating products. My development approach focuses on clean architecture, performance, and security — ensuring your platform is reliable and ready to grow.",
+    icon: "/serviceicon2.gif",
+    services: [
+      "Custom Web Applications",
+      "SaaS Product Development",
+      "Modern Frontend (React / Next.js)",
+      "Backend Systems (Node.js / Express)",
+      "API Development & Integrations",
+      "Secure Authentication & Role Management",
+    ],
+  },
+  {
+    heading: "Deployment",
+    description:
+      "I handle the technical launch process so you can focus on your business. From cloud hosting to performance optimization, I ensure your application runs smoothly, securely, and efficiently in production.",
+    icon: "/serviceicon3.gif",
+    services: [
+      "Cloud Deployment (AWS / Vercel)",
+      "CI/CD Setup & Automation",
+      "SSL & Security Configuration",
+      "Core Web Vitals Optimization",
+      "SEO Technical Optimization",
+    ],
+  },
+  {
+    heading: "Support",
+    description:
+      "Launching is just the beginning. I provide ongoing maintenance, updates, and improvements to keep your product secure, optimized, and aligned with your business growth.",
+    icon: "/serviceicon4.gif",
+    services: [
+      "Bug Fixes & System Maintenance",
+      "Performance Monitoring",
+      "Feature Enhancements",
+      "Code Refactoring",
+      "Technical Consultation",
+    ],
+  },
+];
+
 
   return (
     <div className="serviceSection">
