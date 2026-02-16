@@ -38,7 +38,7 @@ const Footer = () => {
   ];
 
   const [user, setUser] = useState({
-    fullname: "",
+    fullName: "",
     email: "",
     weblink: "",
     message: "",
@@ -50,14 +50,12 @@ const Footer = () => {
     event.preventDefault(); // Prevent default form submission
     try {
       setLoading(true);
-      // const response = await axios.post(`${process.env.DOMAIN}/api/contactus`, user);
-      // const response = await axios.post("http://localhost:3000/api/contactus", user);
-      const response = await axios.post("https://admin.mbasnet.com.np/api/contactus", user);
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/contact/create`, user);
       
       toast.success("Message sent successfully");
       // Clear the form fields
       setUser({
-        fullname: "",
+        fullName: "",
         email: "",
         weblink: "",
         message: "",
@@ -71,7 +69,7 @@ const Footer = () => {
 
   useEffect(() => {
     if (
-      user.fullname.length > 0 &&
+      user.fullName.length > 0 &&
       user.email.length > 0 &&
       user.weblink.length > 0 &&
       user.message.length > 0
@@ -123,9 +121,9 @@ const Footer = () => {
                 type="text"
                 name="Name"
                 id="Name"
-                value={user.fullname}
+                value={user.fullName}
                 onChange={(e) =>
-                  setUser({ ...user, fullname: e.target.value })
+                  setUser({ ...user, fullName: e.target.value })
                 }
                 placeholder="Enter your full name"
               />
