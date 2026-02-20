@@ -50,7 +50,7 @@ const Footer = () => {
     event.preventDefault(); // Prevent default form submission
     try {
       setLoading(true);
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/contact/create`, user);
+       await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/contact/create`, user);
       
       toast.success("Message sent successfully");
       // Clear the form fields
