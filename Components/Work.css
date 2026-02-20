@@ -26,11 +26,12 @@
   padding: 50px 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
+  justify-content: space-between;
+  row-gap: 60px;
 }
 
 .work {
-  width: calc(33% - 36px);
+  width: 31%;
   aspect-ratio: 1/ 1;
 }
 
