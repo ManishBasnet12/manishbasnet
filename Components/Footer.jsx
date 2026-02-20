@@ -104,7 +104,7 @@ const Footer = () => {
             <span>
               <BsArrowReturnRight />
             </span>
-            info@manishbasnet.com
+            info@mbasnet.com.np
           </h2>
         </div>
       </div>
