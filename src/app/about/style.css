@@ -95,15 +95,11 @@
   transform-origin: bottom;
 }
 
-.mimage {
-  width: 65%;
-}
-
 .aboutImage img {
   display: block;
-  min-width: 400px;
   width: 100%;
-  aspect-ratio: 4/ 5;
+  max-width: 370px;
+  min-width: 300px;
   object-fit: cover;
 }
 
@@ -191,57 +187,57 @@
   background-image: linear-gradient(45deg, #101010 0%, #101010 30%, black 100%);
 }
 
-.spotify div{
+.spotify div {
   font-family: "HelveticaNeueMedium", sans-serif;
-
 }
 
-@media (max-width:768px){
-  
-  .aboutImage{
+@media (max-width: 768px) {
+  .aboutImage {
     width: 100%;
   }
-  .mimage{
-    width: 100%;
-  }
-  .aboutOverlay p{
+
+  .aboutOverlay p {
     font-size: 400px;
   }
 
-  .intro{
+  .intro {
     margin-top: 150px;
     font-size: 24px;
   }
 
-  .asheading{
+  .asheading {
     font-size: 24px;
   }
-  .ascards{
+  .ascards {
     grid-template-columns: 1fr;
     margin-top: 50px;
   }
-  .ascard{
-    background-image: linear-gradient(-45deg, #101010 0%, #101010 30%, black 100%);
+  .ascard {
+    background-image: linear-gradient(
+      -45deg,
+      #101010 0%,
+      #101010 30%,
+      black 100%
+    );
     border: 0.0625rem solid #2a272d;
   }
-  .astitle{
+  .astitle {
     font-size: 20px;
   }
 
-  .asdesc{
+  .asdesc {
     font-size: 16px;
   }
 
-  .aboutService{
+  .aboutService {
     margin-top: 150px;
   }
-  .spotify{
+  .spotify {
     margin-top: 150px;
   }
 
-  .spotify div{
-    font-size: 24px!important;
-    margin-left: 0!important;
-
+  .spotify div {
+    font-size: 24px !important;
+    margin-left: 0 !important;
   }
 }
