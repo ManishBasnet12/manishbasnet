@@ -11,7 +11,7 @@
   height: calc(100svh - 70px);
   overflow: hidden;
   display: flex;
-  justify-content: end;
+  justify-content: start;
   position: relative;
 }
 

@@ -99,10 +99,11 @@ const Aboutpage = () => {
         opacity: "0",
       });
 
-      gsap.set(".aboutOverlay", { opacity: 0 });
+      gsap.set(".aboutOverlay", { y: "100%", opacity: 0 });
       const t1 = gsap.timeline({ delay: 0.5 });
 
       t1.to(".aboutOverlay", {
+        y: 0,
         opacity: 1,
         duration: 1.25,
         ease: "power4.out",
