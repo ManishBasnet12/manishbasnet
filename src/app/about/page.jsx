@@ -100,7 +100,7 @@ const Aboutpage = () => {
       });
 
       gsap.set(".aslider", { y: "100%", opacity: 0 });
-      const t1 = gsap.timeline({ delay: 0.15 });
+      const t1 = gsap.timeline({ delay: 0.5 });
 
       t1.to(".aslider", {
         y: 0,
