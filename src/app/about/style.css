@@ -5,9 +5,6 @@
 }
 
 .aboutme {
-  /* width: calc(100vw - 40px); */
-  /* margin: 20px auto; */
-  /* padding-bottom: 20px; */
   height: calc(100svh - 70px);
   overflow: hidden;
   display: flex;
@@ -25,6 +22,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.aslider{
+  opacity: 0;
 }
 
 .aslider p {
@@ -85,6 +86,7 @@
 } */
 
 .aboutImage {
+  opacity: 0;
   width: 50%;
   height: 100%;
   background-color: #202020;

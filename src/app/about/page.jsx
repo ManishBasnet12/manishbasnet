@@ -99,10 +99,10 @@ const Aboutpage = () => {
         opacity: "0",
       });
 
-      gsap.set(".aboutOverlay", { y: "100%", opacity: 0 });
-      const t1 = gsap.timeline({ delay: 0.5 });
+      gsap.set(".aslider", { y: "100%", opacity: 0 });
+      const t1 = gsap.timeline({ delay: 0.15 });
 
-      t1.to(".aboutOverlay", {
+      t1.to(".aslider", {
         y: 0,
         opacity: 1,
         duration: 1.25,
@@ -134,15 +134,15 @@ const Aboutpage = () => {
                 />
               </div>
             </div>
-            <motion.div className="aboutOverlay">
-              <div ref={aslider} className="aslider">
+            <div className="aboutOverlay">
+              <motion.div ref={aslider} className="aslider">
                 <p ref={afirstText}> About Me</p>
                 <p ref={asecondText}> About Me</p>
-              </div>
+              </motion.div>
               {/* <div className="acircle">
               <BsArrowRight />
             </div> */}
-            </motion.div>
+            </div>
           </div>
         </div>
         <div className="intro">

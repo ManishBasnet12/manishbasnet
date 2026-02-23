@@ -8,12 +8,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { motion } from "framer-motion";
 import Homeabout from "../../../Components/Homeabout";
-import Cube from "../../../Components/Cube";
 import HeroSectionContent from "../../../Components/HeroSectionContent";
 import Service from "../../../Components/Service";
 import Work from "../../../Components/Work";
 import Footer from "../../../Components/Footer";
-import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -77,29 +75,16 @@ const Homepage = () => {
     requestAnimationFrame(raf);
   }, []);
 
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    // Set initial state
-    handleResize();
-
-    // Add event listener
-    window.addEventListener("resize", handleResize);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    gsap.set(".title h1", { y: "150%", opacity: 0 });
+    gsap.set(".title h1", { y: "100%", opacity: 0 });
     gsap.set(".slider", { y: "150%" });
     gsap.set(".desc", { opacity: 0 });
+    gsap.set(".heroimage", {
+      scale: "1.3",
+      transformOrigin: "center",
+      opacity: "0",
+    });
 
     const t1 = gsap.timeline({
       delay: 0.5,
@@ -114,10 +99,17 @@ const Homepage = () => {
       .to(".title h1,.desc, .slider", {
         y: 0,
         opacity: 1,
-        duration: 0.15,
-        stagger: 0.1,
-        ease: "power4.inOut",
+        duration: 0.7,
+        stagger: 0.05,
+        ease: "power4.out",
       })
+      .to(".heroimage", {
+        scale: "1",
+        opacity: "1",
+        duration: 1.5,
+        delay: "-1",
+        ease: "power4.out",
+      });
   }, []);
 
   return (
@@ -125,7 +117,7 @@ const Homepage = () => {
       <main className="main">
         <section className="website-content">
           <div className="hero">
-            {isMobile ? (
+            {/* {isMobile ? (
               <div className="mblcube">
                 <Image
                   src="/mblcube.jpg"
@@ -136,8 +128,18 @@ const Homepage = () => {
                 />
               </div>
             ) : (
-              <Cube />
-            )}
+              <></>
+            )} */}
+            <div className="heromainimg">
+              <Image
+                className="heroimage"
+                src="/manish2.png"
+                width={100}
+                height={100}
+                alt="manish2"
+                unoptimized
+              />
+            </div>
             <HeroSectionContent />
             <motion.div className="sliderContainer">
               <div ref={slider} className="slider">

@@ -307,6 +307,7 @@ nav {
   position: relative;
   z-index: 2;
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  cursor: pointer;
 }
 
 .anchor-tag.flexNormal {
@@ -512,6 +513,7 @@ nav {
 }
 
 #logo {
+  max-width: 50px;
   text-transform: none;
   display: flex;
   align-items: center;
@@ -541,6 +543,10 @@ a {
   position: absolute;
   right: 0;
   bottom: -5px;
+}
+
+.heromainimg img {
+  opacity: 0;
 }
 
 @media (min-width: 768px) {
@@ -741,6 +747,7 @@ canvas {
   text-align: left;
   display: flex;
   align-items: center;
+  padding-top: 5px;
 }
 
 .title h1,
@@ -755,7 +762,7 @@ canvas {
 .title-icon {
   width: 8.75vw;
   min-width: 60px;
-  height: 3.5vw;
+  height: 3vw;
   min-height: 30px;
   font-size: 30px;
   display: flex;
@@ -764,7 +771,7 @@ canvas {
   border: 0.15px solid #faf9f6;
   color: #a7a7a7;
   border-radius: 50vw;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 footer {

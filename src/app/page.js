@@ -8,7 +8,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { motion } from "framer-motion";
 import Homeabout from "../../Components/Homeabout";
-import Cube from "../../Components/Cube";
 import HeroSectionContent from "../../Components/HeroSectionContent";
 import Service from "../../Components/Service";
 import Work from "../../Components/Work";
@@ -91,24 +90,6 @@ const Homepage = () => {
     requestAnimationFrame(raf);
   }, []);
 
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    // Set initial state
-    handleResize();
-
-    // Add event listener
-    window.addEventListener("resize", handleResize);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   useEffect(() => {
     gsap.set(".title h1", { y: "100%", opacity: 0 });
@@ -151,19 +132,6 @@ const Homepage = () => {
       <main className="main">
         <section className="website-content">
           <div className="hero">
-            {/* {isMobile ? (
-              <div className="mblcube">
-                <Image
-                  src="/mblcube.jpg"
-                  width={100}
-                  height={100}
-                  alt="mblcube"
-                  unoptimized
-                />
-              </div>
-            ) : (
-              <></>
-            )} */}
             <div className="heromainimg">
               <Image
                 className="heroimage"
